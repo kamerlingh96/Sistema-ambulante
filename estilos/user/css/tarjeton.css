@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Azo Sans Regular';
+  src: url(RuiAbreu-AzoSans-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Azo Sans Bold';
+  src: url(RuiAbreu-AzoSans-Bold.otf);
+}
+
+@font-face {
+  font-family: 'Azo Sans Regular ttf';
+  src: url(RuiAbreu-AzoSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Azo Sans Bold ttf';
+  src: url(RuiAbreu-AzoSans-Bold.ttf);
+}
+
+
+h2 , h3, h4{
+  font-family: 'Azo Sans Bold' , 'Azo Sans Bold ttf';
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.imprimir{
+
+}
+
+
+.fondo{
+  margin: 30px 0;
+  position: absolute;
+  z-index: -13;
+  visibility: hidden;
+}
+
+.elementos{
+  position: absolute;
+}
+
+
+
+.folio{
+  left: 90px;
+  top: 40px;
+}
+
+.id-folio{
+  color: #f49c31;
+}
+
+.codigo{
+  left: 40px;
+  top: 420px;
+}
+
+.encabezado{
+  left: 450px;
+  top: 20px;
+  text-align: center;
+}
+
+.datos{
+  left: 350px;
+  top: 115px;
+  width: 100%;
+}
+
+.datos span{
+  color: #0075d5;
+}
+
+.derecha{
+  float: left;
+  margin-right: 30px;
+}
+
+.derecha-fecha{
+  float: left;
+  margin-right: 10px;
+}
+
+.fecha{
+  width: 80px
+}
+
+.cerrado span{
+  color:#a9adb3;
+}
+
+.botones{
+  left: 70px;
+  top: 670px;
+}
+
+.botones button{
+  width: 100px;
+  height: 25px;
+  font-size: 16px;
+}

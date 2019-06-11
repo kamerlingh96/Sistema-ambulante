@@ -1,0 +1,22 @@
+@media only screen and (max-height: 750px) {
+	.logogrande img{
+		width: 80%!important;
+	}
+}
+
+@media only screen and (max-height: 700px) {
+	.logogrande{
+		display: none;
+	}
+}
+
+
+.datos-subtitle{
+	margin-top: -.375rem !important;
+}
+
+@media only screen and (max-width: 700px) {
+	.form-actions{
+		text-align:left !important;
+	}
+}

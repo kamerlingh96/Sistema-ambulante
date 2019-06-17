@@ -121,14 +121,14 @@ class Comerciante_modificar_controller extends CI_Controller{
         if (isset($dias[$i])) {
 
           if ($desde[$i] != "00:00" || $hasta[$i] != "00:00") {
-            $SQL_fecha = "UPDATE fecha_hora SET desde='$desde[$i]',hasta='$hasta[$i]',dia_laboral='$verdadero',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$dias[$i]'";
+            $SQL_fecha = "UPDATE fecha_hora SET desde='$desde[$i]',hasta='$hasta[$i]',dia_laboral='$verdadero',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$dias[$i]' && id_comerciante='$id'";
             if ($this->db->query($SQL_fecha)) {
               $subio = true;
             }else {
               $subio = false;
             }
           }else {
-            $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$dia[$i]'";
+            $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$dia[$i]' && id_comerciante='$id'";
             if ($this->db->query($SQL_fecha)) {
               $subio = true;
             }else {
@@ -140,14 +140,14 @@ class Comerciante_modificar_controller extends CI_Controller{
           switch ($i) {
             case 0:
             if ($dia[$i] == "true") {
-              $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Lunes'";
+              $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Lunes' && id_comerciante='$id'";
               if ($this->db->query($SQL_fecha)) {
                 $subio = true;
               }else {
                 $subio = false;
               }
             }else {
-              $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Lunes'";
+              $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Lunes' && id_comerciante='$id'";
               if ($this->db->query($SQL_fecha)) {
                 $subio = true;
               }else {
@@ -157,14 +157,14 @@ class Comerciante_modificar_controller extends CI_Controller{
               break;
               case 1:
               if ($dia[$i] == "true") {
-                $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Martes'";
+                $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Martes' && id_comerciante='$id'";
                 if ($this->db->query($SQL_fecha)) {
                   $subio = true;
                 }else {
                   $subio = false;
                 }
               }else {
-                $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Martes'";
+                $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Martes' && id_comerciante='$id'";
                 if ($this->db->query($SQL_fecha)) {
                   $subio = true;
                 }else {
@@ -174,14 +174,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                 break;
                 case 2:
                 if ($dia[$i] == "true") {
-                  $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Miercoles'";
+                  $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Miercoles' && id_comerciante='$id'";
                   if ($this->db->query($SQL_fecha)) {
                     $subio = true;
                   }else {
                     $subio = false;
                   }
                 }else {
-                  $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Miercoles'";
+                  $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Miercoles' && id_comerciante='$id'";
                   if ($this->db->query($SQL_fecha)) {
                     $subio = true;
                   }else {
@@ -191,14 +191,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                   break;
                   case 3:
                   if ($dia[$i] == "true") {
-                    $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Jueves'";
+                    $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Jueves' && id_comerciante='$id'";
                     if ($this->db->query($SQL_fecha)) {
                       $subio = true;
                     }else {
                       $subio = false;
                     }
                   }else {
-                    $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Jueves'";
+                    $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Jueves' && id_comerciante='$id'";
                     if ($this->db->query($SQL_fecha)) {
                       $subio = true;
                     }else {
@@ -208,14 +208,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                     break;
                     case 4:
                     if ($dia[$i] == "true") {
-                      $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Viernes'";
+                      $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Viernes' && id_comerciante='$id'";
                       if ($this->db->query($SQL_fecha)) {
                         $subio = true;
                       }else {
                         $subio = false;
                       }
                     }else {
-                      $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Viernes'";
+                      $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Viernes' && id_comerciante='$id'";
                       if ($this->db->query($SQL_fecha)) {
                         $subio = true;
                       }else {
@@ -225,14 +225,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                       break;
                       case 5:
                       if ($dia[$i] == "true") {
-                        $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Sabado'";
+                        $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Sabado' && id_comerciante='$id'";
                         if ($this->db->query($SQL_fecha)) {
                           $subio = true;
                         }else {
                           $subio = false;
                         }
                       }else {
-                        $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Sabado'";
+                        $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Sabado' && id_comerciante='$id'";
                         if ($this->db->query($SQL_fecha)) {
                           $subio = true;
                         }else {
@@ -242,14 +242,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                         break;
                         case 6:
                         if ($dia[$i] == "true") {
-                          $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Domingo'";
+                          $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Domingo' && id_comerciante='$id'";
                           if ($this->db->query($SQL_fecha)) {
                             $subio = true;
                           }else {
                             $subio = false;
                           }
                         }else {
-                          $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Domingo'";
+                          $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Domingo' && id_comerciante='$id'";
                           if ($this->db->query($SQL_fecha)) {
                             $subio = true;
                           }else {
@@ -276,14 +276,14 @@ class Comerciante_modificar_controller extends CI_Controller{
         if (isset($dias[$i])) {
 
           if ($desde[$i] != "00:00" || $hasta[$i] != "00:00") {
-            $SQL_fecha = "UPDATE fecha_hora SET desde='$desde[$i]',hasta='$hasta[$i]',dia_laboral='$verdadero',horario='$horario',desde2='$desde[$j]',hasta2='$hasta[$j]',desde3='$hora',hasta3='$hora' WHERE fecha='$dias[$i]'";
+            $SQL_fecha = "UPDATE fecha_hora SET desde='$desde[$i]',hasta='$hasta[$i]',dia_laboral='$verdadero',horario='$horario',desde2='$desde[$j]',hasta2='$hasta[$j]',desde3='$hora',hasta3='$hora' WHERE fecha='$dias[$i]' && id_comerciante='$id'";
             if ($this->db->query($SQL_fecha)) {
               $subio = true;
             }else {
               $subio = false;
             }
           }else {
-            $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$dia[$i]'";
+            $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$dia[$i]' && id_comerciante='$id'";
             if ($this->db->query($SQL_fecha)) {
               $subio = true;
             }else {
@@ -295,14 +295,14 @@ class Comerciante_modificar_controller extends CI_Controller{
           switch ($i) {
             case 0:
             if ($dia[$i] == "true") {
-              $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Lunes'";
+              $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Lunes' && id_comerciante='$id'";
               if ($this->db->query($SQL_fecha)) {
                 $subio = true;
               }else {
                 $subio = false;
               }
             }else {
-              $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Lunes'";
+              $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Lunes' && id_comerciante='$id'";
               if ($this->db->query($SQL_fecha)) {
                 $subio = true;
               }else {
@@ -312,14 +312,14 @@ class Comerciante_modificar_controller extends CI_Controller{
               break;
               case 1:
               if ($dia[$i] == "true") {
-                $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Martes'";
+                $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Martes' && id_comerciante='$id'";
                 if ($this->db->query($SQL_fecha)) {
                   $subio = true;
                 }else {
                   $subio = false;
                 }
               }else {
-                $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Martes'";
+                $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Martes' && id_comerciante='$id'";
                 if ($this->db->query($SQL_fecha)) {
                   $subio = true;
                 }else {
@@ -329,14 +329,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                 break;
                 case 2:
                 if ($dia[$i] == "true") {
-                  $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Miercoles'";
+                  $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Miercoles' && id_comerciante='$id'";
                   if ($this->db->query($SQL_fecha)) {
                     $subio = true;
                   }else {
                     $subio = false;
                   }
                 }else {
-                  $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Miercoles'";
+                  $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Miercoles' && id_comerciante='$id'";
                   if ($this->db->query($SQL_fecha)) {
                     $subio = true;
                   }else {
@@ -346,14 +346,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                   break;
                   case 3:
                   if ($dia[$i] == "true") {
-                    $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Jueves'";
+                    $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Jueves' && id_comerciante='$id'";
                     if ($this->db->query($SQL_fecha)) {
                       $subio = true;
                     }else {
                       $subio = false;
                     }
                   }else {
-                    $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Jueves'";
+                    $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Jueves' && id_comerciante='$id'";
                     if ($this->db->query($SQL_fecha)) {
                       $subio = true;
                     }else {
@@ -363,14 +363,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                     break;
                     case 4:
                     if ($dia[$i] == "true") {
-                      $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Viernes'";
+                      $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Viernes' && id_comerciante='$id'";
                       if ($this->db->query($SQL_fecha)) {
                         $subio = true;
                       }else {
                         $subio = false;
                       }
                     }else {
-                      $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Viernes'";
+                      $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Viernes' && id_comerciante='$id'";
                       if ($this->db->query($SQL_fecha)) {
                         $subio = true;
                       }else {
@@ -380,14 +380,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                       break;
                       case 5:
                       if ($dia[$i] == "true") {
-                        $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Sabado'";
+                        $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Sabado' && id_comerciante='$id'";
                         if ($this->db->query($SQL_fecha)) {
                           $subio = true;
                         }else {
                           $subio = false;
                         }
                       }else {
-                        $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Sabado'";
+                        $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Sabado' && id_comerciante='$id'";
                         if ($this->db->query($SQL_fecha)) {
                           $subio = true;
                         }else {
@@ -397,14 +397,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                         break;
                         case 6:
                         if ($dia[$i] == "true") {
-                          $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Domingo'";
+                          $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Domingo' && id_comerciante='$id'";
                           if ($this->db->query($SQL_fecha)) {
                             $subio = true;
                           }else {
                             $subio = false;
                           }
                         }else {
-                          $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Domingo'";
+                          $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Domingo' && id_comerciante='$id'";
                           if ($this->db->query($SQL_fecha)) {
                             $subio = true;
                           }else {
@@ -434,14 +434,14 @@ class Comerciante_modificar_controller extends CI_Controller{
         if (isset($dias[$i])) {
 
           if ($desde[$i] != "00:00" || $hasta[$i] != "00:00") {
-            $SQL_fecha = "UPDATE fecha_hora SET desde='$desde[$i]',hasta='$hasta[$i]',dia_laboral='$verdadero',horario='$horario',desde2='$desde[$j]',hasta2='$hasta[$j]',desde3='$desde[$z]',hasta3='$hasta[$z]' WHERE fecha='$dias[$i]'";
+            $SQL_fecha = "UPDATE fecha_hora SET desde='$desde[$i]',hasta='$hasta[$i]',dia_laboral='$verdadero',horario='$horario',desde2='$desde[$j]',hasta2='$hasta[$j]',desde3='$desde[$z]',hasta3='$hasta[$z]' WHERE fecha='$dias[$i]' && id_comerciante='$id'";
             if ($this->db->query($SQL_fecha)) {
               $subio = true;
             }else {
               $subio = false;
             }
           }else {
-            $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$dia[$i]'";
+            $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$dia[$i]' && id_comerciante='$id'";
             if ($this->db->query($SQL_fecha)) {
               $subio = true;
             }else {
@@ -453,14 +453,14 @@ class Comerciante_modificar_controller extends CI_Controller{
           switch ($i) {
             case 0:
             if ($dia[$i] == "true") {
-              $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Lunes'";
+              $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Lunes' && id_comerciante='$id'";
               if ($this->db->query($SQL_fecha)) {
                 $subio = true;
               }else {
                 $subio = false;
               }
             }else {
-              $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Lunes'";
+              $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Lunes' && id_comerciante='$id'";
               if ($this->db->query($SQL_fecha)) {
                 $subio = true;
               }else {
@@ -470,14 +470,14 @@ class Comerciante_modificar_controller extends CI_Controller{
               break;
               case 1:
               if ($dia[$i] == "true") {
-                $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Martes'";
+                $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Martes' && id_comerciante='$id'";
                 if ($this->db->query($SQL_fecha)) {
                   $subio = true;
                 }else {
                   $subio = false;
                 }
               }else {
-                $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Martes'";
+                $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Martes' && id_comerciante='$id'";
                 if ($this->db->query($SQL_fecha)) {
                   $subio = true;
                 }else {
@@ -487,14 +487,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                 break;
                 case 2:
                 if ($dia[$i] == "true") {
-                  $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Miercoles'";
+                  $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Miercoles' && id_comerciante='$id'";
                   if ($this->db->query($SQL_fecha)) {
                     $subio = true;
                   }else {
                     $subio = false;
                   }
                 }else {
-                  $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Miercoles'";
+                  $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Miercoles' && id_comerciante='$id'";
                   if ($this->db->query($SQL_fecha)) {
                     $subio = true;
                   }else {
@@ -504,14 +504,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                   break;
                   case 3:
                   if ($dia[$i] == "true") {
-                    $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Jueves'";
+                    $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Jueves' && id_comerciante='$id'";
                     if ($this->db->query($SQL_fecha)) {
                       $subio = true;
                     }else {
                       $subio = false;
                     }
                   }else {
-                    $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Jueves'";
+                    $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Jueves' && id_comerciante='$id'";
                     if ($this->db->query($SQL_fecha)) {
                       $subio = true;
                     }else {
@@ -521,14 +521,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                     break;
                     case 4:
                     if ($dia[$i] == "true") {
-                      $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Viernes'";
+                      $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Viernes' && id_comerciante='$id'";
                       if ($this->db->query($SQL_fecha)) {
                         $subio = true;
                       }else {
                         $subio = false;
                       }
                     }else {
-                      $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Viernes'";
+                      $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Viernes' && id_comerciante='$id'";
                       if ($this->db->query($SQL_fecha)) {
                         $subio = true;
                       }else {
@@ -538,14 +538,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                       break;
                       case 5:
                       if ($dia[$i] == "true") {
-                        $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Sabado'";
+                        $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Sabado' && id_comerciante='$id'";
                         if ($this->db->query($SQL_fecha)) {
                           $subio = true;
                         }else {
                           $subio = false;
                         }
                       }else {
-                        $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Sabado'";
+                        $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Sabado' && id_comerciante='$id'";
                         if ($this->db->query($SQL_fecha)) {
                           $subio = true;
                         }else {
@@ -555,14 +555,14 @@ class Comerciante_modificar_controller extends CI_Controller{
                         break;
                         case 6:
                         if ($dia[$i] == "true") {
-                          $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Domingo'";
+                          $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Domingo' && id_comerciante='$id'";
                           if ($this->db->query($SQL_fecha)) {
                             $subio = true;
                           }else {
                             $subio = false;
                           }
                         }else {
-                          $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Domingo'";
+                          $SQL_fecha = "UPDATE fecha_hora SET desde='$hora',hasta='$hora',dia_laboral='$falso',horario='$horario',desde2='$hora',hasta2='$hora',desde3='$hora',hasta3='$hora' WHERE fecha='$Domingo' && id_comerciante='$id'";
                           if ($this->db->query($SQL_fecha)) {
                             $subio = true;
                           }else {

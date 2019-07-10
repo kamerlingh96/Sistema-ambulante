@@ -6,7 +6,8 @@
 
       <script type="text/javascript">
         var reportes = false;
-        var crear_comerciante = true;
+        var crear_comerciante = false;
+        var data_ambulante = true;
       </script>
         <!-- ============================================================== -->
         <!-- ============================================================== -->
@@ -149,7 +150,7 @@
                                           if (file_exists('uploads/'.$consulta->vigencia.'/lugar/'.$consulta->img)) {
                                             ?>
                                             <img src="<?= base_url('uploads/'. $consulta->vigencia.'/lugar').'/'.$consulta->img?>" alt="image" class="rounded-circle responsive" width="290" height="290">
-                                            <h4 class="card-title">Fotografía de la estructura</h4>
+                                            <h4 class="card-title">Fotografía del lugar</h4>
                                             <?php
                                           }elseif (file_exists('uploads/'.$consulta->vigencia.'/lugar/'.$consulta->png)) {
                                             ?>
@@ -687,6 +688,17 @@
                                               <div class="form-group">
                                                   <label>Coordenadas</label>
                                                   <input class="form-control" type="text" value="<?= $consulta->coordenadas ?>" readonly id="coords" name="coordenadas" disabled>
+
+                                                  <?php
+                                                     $cordena = $consulta->coordenadas;
+                                                     list($lat, $lng) = explode(",",$cordena);
+                                                   ?>
+                                                  <script type="text/javascript">
+                                                    var zona_selec = "<?php echo $consulta->zona; ?>"
+                                                    var coordenadas_ambulante_lat = <?php echo $lat; ?>;
+                                                    var coordenadas_ambulante_lng = <?php echo $lng; ?>;
+
+                                                  </script>
                                               </div>
                                             </div>
                                             <div class="col-md-2">

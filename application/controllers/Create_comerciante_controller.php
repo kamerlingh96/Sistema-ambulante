@@ -32,7 +32,7 @@ class Create_comerciante_controller extends CI_Controller
 
         $this->load->view("create_comerciante/Create_comerciante", $array_datos);
         //------------------------------------
-        $this->load->view("footer/Footer", $array_datos2);
+        $this->load->view("footer_create_comerciante/Footer_create_comerciante", $array_datos2);
       }else {
         $this->load->view("404/404");
       }

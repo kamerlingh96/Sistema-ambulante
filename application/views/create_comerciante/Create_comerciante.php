@@ -50,7 +50,7 @@
                                           <div class="col-md-6">
                                               <div class="form-group">
                                                   <label class="control-label">Nombre del solicitante*</label>
-                                                  <input type="text" class="form-control required" placeholder="Nombres y apellidos" name="nombre" maxlength="50">
+                                                  <input type="text" class="form-control " placeholder="Nombres y apellidos" name="nombre" maxlength="50">
                                                 </div>
                                           </div>
                                           <!--/span-->
@@ -86,13 +86,13 @@
                                         <div class="col-md-6">
                                           <div class="form-group">
                                               <label class="control-label">CURP*</label>
-                                              <input type="text" class="form-control text-uppercase required" placeholder="" name="curp" maxlength="18">
+                                              <input type="text" class="form-control text-uppercase " placeholder="" name="curp" maxlength="18">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">Género*</label>
-                                                <select class="form-control custom-select required" data-placeholder="Elegir tipo de género" tabindex="0" name="genero">
+                                                <select class="form-control custom-select " data-placeholder="Elegir tipo de género" tabindex="0" name="genero">
                                                   <option value="">Selecciona el género</option>
                                                   <option value="Masculino">Masculino</option>
                                                   <option value="Femenino">Femenino</option>
@@ -117,7 +117,7 @@
                                             <label>Foto del comerciante*  jpg/png</label>
                                             <div class="input-group">
                                                 <div class="custom-file">
-                                                    <input type="file" class="form-control-file required" name="nombre_archivo1" accept="image/png, image/jpeg" id="nombre_archivo1">
+                                                    <input type="file" class="form-control-file " name="nombre_archivo1" accept="image/png, image/jpeg" id="nombre_archivo1">
                                                 </div>
                                             </div>
                                           </div>
@@ -127,7 +127,7 @@
                                             <label>Credencial*  jpg/png/pdf</label>
                                             <div class="input-group">
                                                 <div class="custom-file">
-                                                    <input type="file" class="form-control-file required" name="nombre_archivo2">
+                                                    <input type="file" class="form-control-file " name="nombre_archivo2">
                                                 </div>
                                             </div>
                                           </div>
@@ -140,7 +140,7 @@
                                           <label>Domicilio*  jpg/png/pdf</label>
                                           <div class="input-group">
                                               <div class="custom-file">
-                                                  <input type="file" class="form-control-file required" name="nombre_archivo3">
+                                                  <input type="file" class="form-control-file " name="nombre_archivo3">
                                               </div>
                                           </div>
                                         </div>
@@ -162,7 +162,7 @@
                                             <label>Fotografía del lugar*  jpg/png/pdf</label>
                                             <div class="input-group">
                                                 <div class="custom-file">
-                                                    <input type="file" class="form-control-file required" name="nombre_archivo5" accept="image/png, image/jpeg">
+                                                    <input type="file" class="form-control-file " name="nombre_archivo5" accept="image/png, image/jpeg">
                                                 </div>
                                             </div>
                                           </div>
@@ -172,7 +172,7 @@
                                             <label>Fotografía de la estructura*  jpg/png/pdf</label>
                                             <div class="input-group">
                                                 <div class="custom-file">
-                                                    <input type="file" class="form-control-file required" name="nombre_archivo6" accept="image/png, image/jpeg">
+                                                    <input type="file" class="form-control-file " name="nombre_archivo6" accept="image/png, image/jpeg">
                                                 </div>
                                             </div>
                                           </div>
@@ -189,7 +189,7 @@
                                             <div class="col-md-3">
                                               <div class="form-group">
                                                 <label class="control-label">Giro*</label>
-                                                <select class="form-control custom-select required" data-placeholder="Elegir tipo de giro" tabindex="0" name="giro">
+                                                <select class="form-control custom-select " data-placeholder="Elegir tipo de giro" tabindex="0" name="giro">
                                                   <option value="">Selecciona un giro</option>
 
                                                   <?php
@@ -210,14 +210,14 @@
                                           <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">Descripción General de los Productos a Comercializar*</label>
-                                                <input type="text" class="form-control required" placeholder="Ejemplo: Aguas de diferentes sabores" name="descripcion">
+                                                <input type="text" class="form-control " placeholder="Ejemplo: Aguas de diferentes sabores" name="descripcion">
                                               </div>
                                           </div>
 
                                           <div class="col-md-3">
                                               <div class="form-group">
                                                   <label class="control-label">Tipo de permiso*</label>
-                                                  <select class="form-control custom-select required" data-placeholder="Elegir tipo de permiso" tabindex="0" name="tipo">
+                                                  <select class="form-control custom-select " data-placeholder="Elegir tipo de permiso" tabindex="0" name="tipo">
                                                     <option value="">Selecciona un permiso</option>
                                                     <?php
                                                     foreach ($consulta3->result() as $permisos) {
@@ -236,7 +236,7 @@
                                             <div class="col-md-6">
                                               <div class="form-group" id="my-tag-list">
                                                 <label class="control-label">Actividad*</label>
-                                                <input type="text" value="" data-role="tagsinput" class="form-control required" style="width:100%;" name="tags" id="tagsList">
+                                                <input type="text" value="" data-role="tagsinput" class="form-control " style="width:100%;" name="tags" id="tagsList">
 
 
 
@@ -807,14 +807,14 @@
                                         <div class="col-md-6">
                                           <div class="form-group">
                                               <label class="control-label">Dirección de la Venta Ambulante*</label>
-                                              <input type="text" class="form-control required" placeholder="Ejemplo: Calle 35 #12, Col. Centro" name="direccion" maxlength="50s">
+                                              <input type="text" class="form-control " placeholder="Ejemplo: Calle 35 #12, Col. Centro" name="direccion" maxlength="50s">
                                             </div>
                                         </div>
 
                                         <div class="col-md-2">
                                             <div class="form-group">
                                                 <label class="control-label">Zona Solicitada*</label>
-                                                <select class="form-control custom-select required" id="SelectID" data-placeholder="Elegir Zona" tabindex="0" name="zona">
+                                                <select class="form-control custom-select " id="SelectID" data-placeholder="Elegir Zona" tabindex="0" name="zona">
                                                     <option value="">Selecciona una estructura</option>
                                                     <option value="Zona 1">Zona 1</option>
                                                     <option value="Zona 2">Zona 2</option>
@@ -842,7 +842,7 @@
                                         <div class="col-md-2">
                                           <div class="form-group">
                                               <label class="control-label">Tipo de estructura*</label>
-                                              <select class="form-control custom-select required" data-placeholder="Elegir Zona" tabindex="0" name="estructura">
+                                              <select class="form-control custom-select " data-placeholder="Elegir Zona" tabindex="0" name="estructura">
                                                   <option value="">Selecciona una estructura</option>
                                                 <?php
                                                 foreach ($consulta2->result() as $estructura) {
@@ -864,7 +864,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="participants1">Estado de la Solicitud del Permiso Ambulante</label>
-                                                    <select class="custom-select form-control required" id="estado" name="estado">
+                                                    <select class="custom-select form-control " id="estado" name="estado">
                                                         <option value="Activo">Activo</option>
                                                         <option value="Renovante">Renovante</option>
                                                         <option value="Inactivo">Inactivo</option>

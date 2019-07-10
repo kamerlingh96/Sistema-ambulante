@@ -1216,6 +1216,922 @@ if (reportes) {
     val_map = str2;
 
   }
+
+
+
+
+
+
+
+
+
+
+  if (data_ambulante) {
+
+
+        $( "#SelectID" )
+        .change(function () {
+          var str = "";
+          $( "#SelectID" ).each(function() {
+            str += $( this ).val();
+          });
+          str2 = str;
+          console.log(str);
+
+          switch (str) {
+            case "Zona 1":
+            document.getElementById("mapas").style.display = "flex";
+            document.getElementById("map_10_1").style.display = "flex";
+            document.getElementById("map_10_2").style.display = "none";
+            document.getElementById("map_10_3").style.display = "none";
+            document.getElementById("map_10_4").style.display = "none";
+            document.getElementById("map_10_5").style.display = "none";
+            document.getElementById("map_10_6").style.display = "none";
+            var map_10;
+            if (zona_selec == "Zona 1") {
+              map_10 = new GMaps({
+                div: '#map_10_1',
+                lat: coordenadas_ambulante_lat,
+                lng: coordenadas_ambulante_lng
+              });
+            }else {
+              map_10 = new GMaps({
+                div: '#map_10_1',
+                lat: 18.638273,
+                lng: -91.836689
+              });
+            }
+
+            var path3 = [];
+            var p = [
+              [18.64303, -91.84439],
+              [18.64196, -91.84137],
+              [18.63456, -91.8353],
+              [18.63432, -91.83461],
+              [18.63123, -91.83195],
+              [18.63013, -91.83006],
+              [18.63036, -91.829],
+              [18.6302, -91.82792],
+              [18.63021, -91.82689],
+              [18.63016, -91.82605],
+              [18.63003, -91.82539],
+              [18.6294, -91.82517],
+              [18.62818, -91.82655],
+              [18.62786, -91.82677],
+              [18.62766, -91.8261],
+              [18.62842, -91.82457],
+              [18.62981, -91.82423],
+              [18.63089, -91.82285],
+              [18.63321, -91.82332],
+              [18.63431, -91.82159],
+              [18.63689, -91.82042],
+              [18.63794, -91.81888],
+              [18.64469, -91.81908],
+              [18.64326, -91.8227],
+              [18.64307, -91.82295],
+              [18.64616, -91.82734],
+              [18.64697, -91.82623],
+              [18.64889, -91.82226],
+              [18.65111, -91.82463],
+              [18.64894, -91.82689],
+              [18.64858, -91.82776],
+              [18.65006, -91.82908],
+              [18.64909, -91.83001],
+              [18.64873, -91.83068],
+              [18.64631, -91.83821]
+
+
+
+            ];
+            for (var i in p) {
+              latlng = new google.maps.LatLng(p[i][0], p[i][1]);
+              path3.push(latlng);
+            }
+            zona1 = map_10.drawPolygon({
+              paths: path3,
+              strokeColor: '#BBD8E9',
+              strokeOpacity: 1,
+              strokeWeight: 3,
+              fillColor: '#BBD8E9',
+              fillOpacity: 0.6
+            });
+            if (zona_selec == "Zona 1") {
+              map_10.addMarker({
+                lat: coordenadas_ambulante_lat,
+                lng: coordenadas_ambulante_lng,
+                draggable: true,
+                fences: [zona1],
+                dragend:function(e) {
+                  document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+                  $("a[href$='#next']").css("display","flex");
+                  $("a[href$='#previous']").css("display","flex");
+                  if ( $("#enviarEdicion1").length > 0 ) {
+                    document.getElementById("enviarEdicion1").style.display = "inline";
+                  }
+                },
+                outside: function(m, f) {
+                  alert('Fuera de Zona 1');
+                  $("a[href$='#next']").css("display","none");
+                  $("a[href$='#previous']").css("display","none");
+                  if ( $("#enviarEdicion1").length > 0 ) {
+                    document.getElementById("enviarEdicion1").style.display = "none";
+                  }
+                }
+
+
+              });
+            }else {
+              map_10.addMarker({
+                lat: 18.638273,
+                lng: -91.836689,
+                draggable: true,
+                fences: [zona1],
+                dragend:function(e) {
+                  document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+                  $("a[href$='#next']").css("display","flex");
+                  $("a[href$='#previous']").css("display","flex");
+                  if ( $("#enviarEdicion1").length > 0 ) {
+                    document.getElementById("enviarEdicion1").style.display = "inline";
+                  }
+                },
+                outside: function(m, f) {
+                  alert('Fuera de Zona 1');
+                  $("a[href$='#next']").css("display","none");
+                  $("a[href$='#previous']").css("display","none");
+                  if ( $("#enviarEdicion1").length > 0 ) {
+                    document.getElementById("enviarEdicion1").style.display = "none";
+                  }
+                }
+
+
+              });
+            }
+
+
+
+
+
+              break;
+              case "Zona 2":
+              document.getElementById("mapas").style.display = "flex";
+              document.getElementById("map_10_1").style.display = "none";
+              document.getElementById("map_10_2").style.display = "flex";
+              document.getElementById("map_10_3").style.display = "none";
+              document.getElementById("map_10_4").style.display = "none";
+              document.getElementById("map_10_5").style.display = "none";
+              document.getElementById("map_10_6").style.display = "none";
+              var map_10;
+              if (zona_selec == "Zona 2") {
+                map_10 = new GMaps({
+                  div: '#map_10_2',
+                  lat: coordenadas_ambulante_lat,
+                  lng: coordenadas_ambulante_lng
+                });
+              }else {
+                map_10 = new GMaps({
+                  div: '#map_10_2',
+                  lat: 18.650303,
+                  lng: -91.839694
+                });
+              }
+
+              var path3 = [];
+              var p = [
+                [18.64303, -91.84439],
+                [18.64631, -91.83821],
+                [18.64871, -91.8307],
+                [18.64907, -91.83004],
+                [18.65004, -91.8291],
+                [18.64856, -91.82778],
+                [18.64892, -91.82691],
+                [18.65034, -91.82552],
+                [18.65109, -91.82465],
+                [18.65256, -91.82615],
+                [18.65403, -91.82476],
+                [18.65535, -91.82206],
+                [18.65489, -91.82164],
+                [18.65569, -91.82042],
+                [18.65677, -91.81694],
+                [18.65751, -91.81719],
+                [18.6582, -91.81461],
+                [18.65849, -91.81393],
+                [18.65793, -91.81339],
+                [18.65908, -91.8095],
+                [18.66119, -91.81063],
+                [18.66251, -91.80882],
+                [18.66293, -91.80738],
+                [18.66344, -91.80648],
+                [18.66356, -91.80584],
+                [18.66334, -91.80554],
+                [18.66238, -91.80509],
+                [18.66229, -91.80483],
+                [18.66262, -91.80367],
+                [18.66258, -91.80347],
+                [18.66592, -91.80403],
+                [18.66561, -91.8103],
+                [18.66522, -91.81101],
+                [18.66409, -91.83046],
+                [18.66494, -91.83833],
+                [18.66494, -91.84009],
+                [18.66455, -91.84089],
+                [18.66384, -91.84103],
+                [18.66251, -91.84291],
+                [18.66026, -91.84523],
+                [18.65229, -91.85115],
+                [18.65046, -91.85145],
+                [18.6478, -91.8502],
+                [18.64822, -91.84905],
+                [18.64761, -91.84885],
+                [18.64723, -91.84809],
+                [18.64828, -91.84695],
+                [18.64881, -91.84763],
+                [18.65021, -91.8483],
+                [18.65107, -91.84653],
+                [18.6496, -91.84576],
+                [18.65018, -91.84458],
+                [18.65331, -91.84619],
+                [18.65392, -91.84551],
+                [18.65049, -91.84373],
+                [18.65113, -91.84245],
+                [18.65479, -91.84447],
+                [18.65533, -91.84375],
+                [18.65031, -91.84117],
+                [18.64994, -91.8421],
+                [18.6504, -91.84247],
+                [18.64912, -91.8453],
+                [18.64586, -91.84746],
+                [18.64568, -91.84712],
+                [18.64496, -91.84757]
+
+
+
+              ];
+              for (var i in p) {
+                latlng = new google.maps.LatLng(p[i][0], p[i][1]);
+                path3.push(latlng);
+              }
+              zona1 = map_10.drawPolygon({
+                paths: path3,
+                strokeColor: '#BBD8E9',
+                strokeOpacity: 1,
+                strokeWeight: 3,
+                fillColor: '#BBD8E9',
+                fillOpacity: 0.6
+              });
+
+              if (zona_selec == "Zona 2") {
+                map_10.addMarker({
+                  lat: coordenadas_ambulante_lat,
+                  lng: coordenadas_ambulante_lng,
+                  draggable: true,
+                  fences: [zona1],
+                  dragend:function(e) {
+                    document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+                    $("a[href$='#next']").css("display","flex");
+                    $("a[href$='#previous']").css("display","flex");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "inline";
+                    }
+                  },
+                  outside: function(m, f) {
+                    alert('Fuera de Zona 2');
+                    $("a[href$='#next']").css("display","none");
+                    $("a[href$='#previous']").css("display","none");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "none";
+                    }
+                  }
+                });
+              }else {
+                map_10.addMarker({
+                  lat: 18.650303,
+                  lng: -91.839694,
+                  draggable: true,
+                  fences: [zona1],
+                  dragend:function(e) {
+                    document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+                    $("a[href$='#next']").css("display","flex");
+                    $("a[href$='#previous']").css("display","flex");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "inline";
+                    }
+                  },
+                  outside: function(m, f) {
+                    alert('Fuera de Zona 2');
+                    $("a[href$='#next']").css("display","none");
+                    $("a[href$='#previous']").css("display","none");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "none";
+                    }
+                  }
+                });
+              }
+
+
+              break;
+              case "Zona 3":
+              document.getElementById("mapas").style.display = "flex";
+              document.getElementById("map_10_1").style.display = "none";
+              document.getElementById("map_10_2").style.display = "none";
+              document.getElementById("map_10_3").style.display = "flex";
+              document.getElementById("map_10_4").style.display = "none";
+              document.getElementById("map_10_5").style.display = "none";
+              document.getElementById("map_10_6").style.display = "none";
+              var map_10;
+              if (zona_selec == "Zona 3") {
+                map_10 = new GMaps({
+                  div: '#map_10_3',
+                  lat: coordenadas_ambulante_lat,
+                  lng: coordenadas_ambulante_lng
+                });
+              }else {
+                map_10 = new GMaps({
+                  div: '#map_10_3',
+                  lat: 18.636480,
+                  lng: -91.813584
+                });
+              }
+
+              var path3 = [];
+              var p = [
+                [18.64009, -91.81895],
+                [18.63794, -91.81888],
+                [18.63689, -91.82042],
+                [18.63553, -91.82086],
+                [18.63401, -91.82109],
+                [18.63382, -91.82131],
+                [18.63353, -91.82132],
+                [18.63301, -91.82175],
+                [18.63269, -91.82171],
+                [18.6326, -91.8216],
+                [18.63236, -91.82172],
+                [18.63228, -91.82216],
+                [18.63201, -91.82272],
+                [18.63186, -91.8228],
+                [18.63066, -91.8227],
+                [18.63043, -91.82244],
+                [18.63022, -91.82238],
+                [18.63012, -91.82176],
+                [18.63, -91.8216],
+                [18.6299, -91.82135],
+                [18.6299, -91.82101],
+                [18.62978, -91.82075],
+                [18.62944, -91.82049],
+                [18.62939, -91.82031],
+                [18.62922, -91.82024],
+                [18.62898, -91.82],
+                [18.62886, -91.81998],
+                [18.62885, -91.81968],
+                [18.63034, -91.81774],
+                [18.63111, -91.81657],
+                [18.63158, -91.81547],
+                [18.63172, -91.81495],
+                [18.63173, -91.8146],
+                [18.63157, -91.81418],
+                [18.6314, -91.81405],
+                [18.63145, -91.81384],
+                [18.63137, -91.81349],
+                [18.63149, -91.81282],
+                [18.63134, -91.81216],
+                [18.6313, -91.81088],
+                [18.6319, -91.81],
+                [18.63255, -91.80921],
+                [18.63276, -91.8085],
+                [18.63287, -91.80775],
+                [18.63344, -91.80689],
+                [18.63342, -91.80619],
+                [18.63405, -91.80518],
+                [18.63445, -91.80544],
+                [18.63444, -91.80598],
+                [18.63454, -91.80648],
+                [18.6349, -91.80657],
+                [18.63597, -91.80981],
+                [18.63623, -91.81195],
+                [18.63648, -91.81186],
+                [18.6364, -91.81043],
+                [18.63672, -91.8075],
+                [18.63654, -91.8064],
+                [18.63608, -91.80599],
+                [18.63596, -91.80545],
+                [18.63604, -91.80455],
+                [18.6366, -91.80433],
+                [18.63669, -91.80389],
+                [18.63816, -91.80403],
+                [18.63852, -91.80266],
+                [18.63951, -91.80184],
+                [18.64057, -91.80152],
+                [18.64102, -91.80093],
+                [18.64038, -91.80014],
+                [18.64032, -91.79932],
+                [18.64049, -91.79875],
+                [18.64034, -91.79814],
+                [18.64055, -91.79797],
+                [18.64085, -91.79794],
+                [18.64102, -91.79777],
+                [18.64146, -91.79707],
+                [18.64151, -91.79637],
+                [18.64103, -91.79511],
+                [18.64046, -91.79458],
+                [18.63988, -91.79434],
+                [18.63973, -91.79435],
+                [18.64044, -91.79487],
+                [18.64051, -91.79516],
+                [18.64008, -91.79534],
+                [18.63964, -91.79531],
+                [18.63651, -91.79152],
+                [18.63503, -91.78771],
+                [18.63693, -91.78755],
+                [18.63744, -91.78684],
+                [18.63724, -91.78317],
+                [18.63885, -91.78314],
+                [18.63868, -91.78359],
+                [18.63875, -91.7851],
+                [18.63969, -91.78543],
+                [18.64017, -91.78593],
+                [18.64042, -91.78592],
+                [18.64077, -91.78614],
+                [18.64144, -91.7864],
+                [18.64116, -91.78671],
+                [18.64151, -91.7869],
+                [18.64152, -91.78707],
+                [18.64275, -91.78807],
+                [18.64256, -91.78859],
+                [18.64256, -91.78911],
+                [18.64317, -91.78972],
+                [18.64235, -91.78942],
+                [18.64189, -91.7895],
+                [18.64136, -91.78994],
+                [18.64115, -91.79051],
+                [18.64107, -91.79143],
+                [18.64111, -91.79275],
+                [18.64228, -91.7927],
+                [18.64343, -91.79396],
+                [18.6428, -91.79755],
+                [18.64433, -91.80094],
+                [18.64972, -91.80574],
+                [18.64787, -91.81173],
+                [18.64715, -91.81137],
+                [18.64377, -91.81072],
+                [18.64244, -91.81147],
+                [18.64051, -91.81185],
+                [18.63785, -91.81231],
+                [18.63791, -91.81286],
+                [18.63818, -91.81336],
+                [18.63984, -91.81574],
+                [18.63966, -91.81609]
+
+
+              ];
+              for (var i in p) {
+                latlng = new google.maps.LatLng(p[i][0], p[i][1]);
+                path3.push(latlng);
+              }
+              zona1 = map_10.drawPolygon({
+                paths: path3,
+                strokeColor: '#BBD8E9',
+                strokeOpacity: 1,
+                strokeWeight: 3,
+                fillColor: '#BBD8E9',
+                fillOpacity: 0.6
+              });
+              if (zona_selec == "Zona 3") {
+                map_10.addMarker({
+                  lat: coordenadas_ambulante_lat,
+                  lng: coordenadas_ambulante_lng,
+                  draggable: true,
+                  fences: [zona1],
+                  dragend:function(e) {
+                    document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+                    $("a[href$='#next']").css("display","flex");
+                    $("a[href$='#previous']").css("display","flex");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "inline";
+                    }
+                  },
+                  outside: function(m, f) {
+                    alert('Fuera de Zona 3');
+                    $("a[href$='#next']").css("display","none");
+                    $("a[href$='#previous']").css("display","none");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "none";
+                    }
+                  }
+                });
+              }else {
+                map_10.addMarker({
+                  lat: 18.636480,
+                  lng: -91.812987,
+                  draggable: true,
+                  fences: [zona1],
+                  dragend:function(e) {
+                    document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+                    $("a[href$='#next']").css("display","flex");
+                    $("a[href$='#previous']").css("display","flex");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "inline";
+                    }
+                  },
+                  outside: function(m, f) {
+                    alert('Fuera de Zona 3');
+                    $("a[href$='#next']").css("display","none");
+                    $("a[href$='#previous']").css("display","none");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "none";
+                    }
+                  }
+                });
+              }
+
+
+              break;
+              case "Zona 4":
+              document.getElementById("mapas").style.display = "flex";
+              document.getElementById("map_10_1").style.display = "none";
+              document.getElementById("map_10_2").style.display = "none";
+              document.getElementById("map_10_3").style.display = "none";
+              document.getElementById("map_10_4").style.display = "flex";
+              document.getElementById("map_10_5").style.display = "none";
+              document.getElementById("map_10_6").style.display = "none";
+              var map_10;
+              if (zona_selec == "Zona 4") {
+                map_10 = new GMaps({
+                  div: '#map_10_4',
+                  lat: coordenadas_ambulante_lat,
+                  lng: coordenadas_ambulante_lng
+                });
+              }else {
+                map_10 = new GMaps({
+                  div: '#map_10_4',
+                  lat: 18.649652,
+                  lng: -91.813584
+                });
+              }
+
+              var path3 = [];
+              var p = [
+                [18.64616, -91.82734],
+                [18.64307, -91.82295],
+                [18.64326, -91.8227],
+                [18.64477, -91.81906],
+                [18.64009, -91.81895],
+                [18.63966, -91.81609],
+                [18.63984, -91.81574],
+                [18.63818, -91.81336], //Punto 9
+                [18.63791, -91.81286],
+                [18.63785, -91.81231],
+                [18.64183, -91.81162],
+                [18.64244, -91.81147],
+                [18.64377, -91.81072],
+                [18.64715, -91.81137],
+                [18.64787, -91.81173],
+                [18.64972, -91.80574],
+                [18.64433, -91.80094],
+                [18.6428, -91.79755],
+                [18.64343, -91.79396],
+                [18.64228, -91.7927],
+                [18.64111, -91.79275],
+                [18.64107, -91.79143],
+                [18.64115, -91.79051],
+                [18.64136, -91.78994],
+                [18.64189, -91.7895],
+                [18.64235, -91.78942],
+                [18.64317, -91.78972],
+                [18.65746, -91.8024],
+                [18.65778, -91.80256],
+                [18.66259, -91.80345],
+                [18.66264, -91.80365],
+                [18.66231, -91.80481],
+                [18.6624, -91.80507],
+                [18.66336, -91.80552],
+                [18.66358, -91.80582],
+                [18.66346, -91.80646],
+                [18.66295, -91.80736],
+                [18.66253, -91.8088],
+                [18.66121, -91.81061],
+                [18.6591, -91.80948],
+                [18.65795, -91.81337],
+                [18.65851, -91.81391],
+                [18.65822, -91.81459],
+                [18.65753, -91.81717],
+                [18.65679, -91.81692],
+                [18.65571, -91.8204],
+                [18.65521, -91.82123],
+                [18.65491, -91.82162],
+                [18.65537, -91.82203],
+                [18.65405, -91.82474],
+                [18.65258, -91.82613],
+                [18.64889, -91.82226],
+                [18.64697, -91.82623]
+
+              ];
+              for (var i in p) {
+                latlng = new google.maps.LatLng(p[i][0], p[i][1]);
+                path3.push(latlng);
+              }
+              zona1 = map_10.drawPolygon({
+                paths: path3,
+                strokeColor: '#BBD8E9',
+                strokeOpacity: 1,
+                strokeWeight: 3,
+                fillColor: '#BBD8E9',
+                fillOpacity: 0.6
+              });
+
+              if (zona_selec == "Zona 4") {
+                map_10.addMarker({
+                  lat: coordenadas_ambulante_lat,
+                  lng: coordenadas_ambulante_lng,
+                  draggable: true,
+                  fences: [zona1],
+                  dragend:function(e) {
+                    document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+                    $("a[href$='#next']").css("display","flex");
+                    $("a[href$='#previous']").css("display","flex");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "inline";
+                    }
+                  },
+                  outside: function(m, f) {
+                    alert('Fuera de Zona 4');
+                    $("a[href$='#next']").css("display","none");
+                    $("a[href$='#previous']").css("display","none");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "none";
+                    }
+                  }
+                });
+              }else {
+                map_10.addMarker({
+                  lat: 18.649652,
+                  lng: -91.812987,
+                  draggable: true,
+                  fences: [zona1],
+                  dragend:function(e) {
+                    document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+                    $("a[href$='#next']").css("display","flex");
+                    $("a[href$='#previous']").css("display","flex");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "inline";
+                    }
+                  },
+                  outside: function(m, f) {
+                    alert('Fuera de Zona 4');
+                    $("a[href$='#next']").css("display","none");
+                    $("a[href$='#previous']").css("display","none");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "none";
+                    }
+                  }
+                });
+              }
+
+              break;
+              case "Zona 5":
+              document.getElementById("mapas").style.display = "flex";
+              document.getElementById("map_10_1").style.display = "none";
+              document.getElementById("map_10_2").style.display = "none";
+              document.getElementById("map_10_3").style.display = "none";
+              document.getElementById("map_10_4").style.display = "none";
+              document.getElementById("map_10_5").style.display = "flex";
+              document.getElementById("map_10_6").style.display = "none";
+              var map_10;
+
+              if (zona_selec == "Zona 5") {
+                map_10 = new GMaps({
+                  div: '#map_10_5',
+                  lat: coordenadas_ambulante_lat,
+                  lng: coordenadas_ambulante_lng
+                });
+
+              }else {
+                map_10 = new GMaps({
+                  div: '#map_10_5',
+                  lat: 18.653894,
+                  lng: -91.790306
+                });
+              }
+
+
+              var path3 = [];
+              var p = [
+                [18.64257, -91.78916],
+                [18.64256, -91.78859],
+                [18.64275, -91.78807],
+                [18.64152, -91.78707],
+                [18.64151, -91.7869],
+                [18.64116, -91.78671],
+                [18.64144, -91.7864],
+                [18.64077, -91.78614],
+                [18.64042, -91.78592],
+                [18.64017, -91.78593],
+                [18.63969, -91.78543],
+                [18.63875, -91.7851],
+                [18.63868, -91.78359],
+                [18.63885, -91.78314],
+                [18.63498, -91.78318],
+                [18.63492, -91.78121],
+                [18.63513, -91.77889],
+                [18.63535, -91.77849],
+                [18.63558, -91.77826],
+                [18.63558, -91.77747],
+                [18.63612, -91.7752],
+                [18.64641, -91.77964],
+                [18.64671, -91.77973],
+                [18.64737, -91.77971],
+                [18.65614, -91.78358],
+                [18.6572, -91.78051],
+                [18.66779, -91.7869],
+                [18.66735, -91.78898],
+                [18.66757, -91.78995],
+                [18.66642, -91.79718],
+                [18.66659, -91.79737],
+                [18.66662, -91.79762],
+                [18.66592, -91.80345],
+                [18.66594, -91.80401],
+                [18.65778, -91.80256],
+                [18.65746, -91.8024]
+
+              ];
+              for (var i in p) {
+                latlng = new google.maps.LatLng(p[i][0], p[i][1]);
+                path3.push(latlng);
+              }
+              zona1 = map_10.drawPolygon({
+                paths: path3,
+                strokeColor: '#BBD8E9',
+                strokeOpacity: 1,
+                strokeWeight: 3,
+                fillColor: '#BBD8E9',
+                fillOpacity: 0.6
+              });
+              if (zona_selec == "Zona 5") {
+                map_10.addMarker({
+                  lat: coordenadas_ambulante_lat,
+                  lng: coordenadas_ambulante_lng,
+                  draggable: true,
+                  fences: [zona1],
+                  dragend:function(e) {
+                    document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+                    $("a[href$='#next']").css("display","flex");
+                    $("a[href$='#previous']").css("display","flex");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "inline";
+                    }
+                  },
+                  outside: function(m, f) {
+                    alert('Fuera de Zona 5');
+                    $("a[href$='#next']").css("display","none");
+                    $("a[href$='#previous']").css("display","none");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "none";
+                    }
+                  }
+                });
+              }else {
+                map_10.addMarker({
+                  lat: 18.653894,
+                  lng: -91.790306,
+                  draggable: true,
+                  fences: [zona1],
+                  dragend:function(e) {
+                    document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+                    $("a[href$='#next']").css("display","flex");
+                    $("a[href$='#previous']").css("display","flex");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "inline";
+                    }
+                  },
+                  outside: function(m, f) {
+                    alert('Fuera de Zona 5');
+                    $("a[href$='#next']").css("display","none");
+                    $("a[href$='#previous']").css("display","none");
+                    if ( $("#enviarEdicion1").length > 0 ) {
+                      document.getElementById("enviarEdicion1").style.display = "none";
+                    }
+                  }
+                });
+              }
+
+                break;
+                case "Zona 6":
+                document.getElementById("mapas").style.display = "flex";
+                document.getElementById("map_10_1").style.display = "none";
+                document.getElementById("map_10_2").style.display = "none";
+                document.getElementById("map_10_3").style.display = "none";
+                document.getElementById("map_10_4").style.display = "none";
+                document.getElementById("map_10_5").style.display = "none";
+                document.getElementById("map_10_6").style.display = "flex";
+                var map_10;
+                if (zona_selec == "Zona 6") {
+                  map_10 = new GMaps({
+                    div: '#map_10_6',
+                    lat: coordenadas_ambulante_lat,
+                    lng: coordenadas_ambulante_lng
+                  });
+                }else {
+                  map_10 = new GMaps({
+                    div: '#map_10_6',
+                    lat: 18.651746,
+                    lng: -91.772413
+                  });
+                }
+
+                var path3 = [];
+                var p = [
+                  [18.66779, -91.7869],
+                  [18.6572, -91.78051],
+                  [18.65614, -91.78358],
+                  [18.64737, -91.77971],
+                  [18.64671, -91.77973],
+                  [18.64641, -91.77964],
+                  [18.63612, -91.7752],
+                  [18.63808, -91.77078],
+                  [18.64166, -91.76894],
+                  [18.67276, -91.73606],
+                  [18.67752, -91.72224],
+                  [18.68541, -91.7283],
+                  [18.67964, -91.74314],
+                  [18.67203, -91.77065],
+                  [18.67069, -91.77933]
+
+                ];
+                for (var i in p) {
+                  latlng = new google.maps.LatLng(p[i][0], p[i][1]);
+                  path3.push(latlng);
+                }
+                zona1 = map_10.drawPolygon({
+                  paths: path3,
+                  strokeColor: '#BBD8E9',
+                  strokeOpacity: 1,
+                  strokeWeight: 3,
+                  fillColor: '#BBD8E9',
+                  fillOpacity: 0.6
+                });
+                if (zona_selec == "Zona 6") {
+                  map_10.addMarker({
+                    lat: coordenadas_ambulante_lat,
+                    lng: coordenadas_ambulante_lng,
+                    draggable: true,
+                    fences: [zona1],
+                    dragend:function(e) {
+                      document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+                      $("a[href$='#next']").css("display","flex");
+                      $("a[href$='#previous']").css("display","flex");
+                      if ( $("#enviarEdicion1").length > 0 ) {
+                        document.getElementById("enviarEdicion1").style.display = "inline";
+                      }
+                    },
+                    outside: function(m, f) {
+                      alert('Fuera de Zona 6');
+                      $("a[href$='#next']").css("display","none");
+                      $("a[href$='#previous']").css("display","none");
+                      if ( $("#enviarEdicion1").length > 0 ) {
+                        document.getElementById("enviarEdicion1").style.display = "none";
+                      }
+                    }
+                  });
+                }else {
+                  map_10.addMarker({
+                    lat: 18.651746,
+                    lng: -91.772413,
+                    draggable: true,
+                    fences: [zona1],
+                    dragend:function(e) {
+                      document.getElementById("coords").value = this.getPosition().lat()+","+ this.getPosition().lng();
+                      $("a[href$='#next']").css("display","flex");
+                      $("a[href$='#previous']").css("display","flex");
+                      if ( $("#enviarEdicion1").length > 0 ) {
+                        document.getElementById("enviarEdicion1").style.display = "inline";
+                      }
+                    },
+                    outside: function(m, f) {
+                      alert('Fuera de Zona 6');
+                      $("a[href$='#next']").css("display","none");
+                      $("a[href$='#previous']").css("display","none");
+                      if ( $("#enviarEdicion1").length > 0 ) {
+                        document.getElementById("enviarEdicion1").style.display = "none";
+                      }
+                    }
+                  });
+                }
+
+                  break;
+            default:
+            document.getElementById("mapas").style.display = "none";
+            document.getElementById("map_10_1").style.display = "none";
+            document.getElementById("map_10_2").style.display = "none";
+            document.getElementById("map_10_3").style.display = "none";
+            document.getElementById("map_10_4").style.display = "none";
+            document.getElementById("map_10_5").style.display = "none";
+            document.getElementById("map_10_6").style.display = "none";
+            break;
+          }
+
+        })
+        .change();
+
+        val_map = str2;
+  }
     /*var map_10;
     map_10 = new GMaps({
         div: '#map_10',

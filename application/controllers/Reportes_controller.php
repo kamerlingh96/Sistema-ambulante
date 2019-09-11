@@ -31,15 +31,23 @@ class Reportes_controller extends CI_Controller{
 
 
 
+
         if ($this->input->post()) {
           $filtro = $this->input->post();
 
-          $data_comerciante = array('consulta' => $resultActivos, 'consulta2' => $giros, 'consulta3' => $tags, 'consulta5' => $estructuras,'comentarios6',$comentarios);
+          $data_comerciante = array('consulta' => $resultActivos, 'consulta2' => $giros, 'consulta3' => $tags, 'consulta5' => $estructuras,'comentarios' => $comentarios);
 
           $fecha = $filtro['fecha'];
           $data_comerciante['fecha'] = $fecha;
           $genero = $filtro['genero'];
           $data_comerciante['genero'] = $genero;
+
+          if ($fecha == "4") {
+            $data_comerciante['desde'] = $filtro['desde'];
+            $data_comerciante['hasta'] = $filtro['hasta'];
+          }
+
+
           //-----------------------------------------------------//
           if (isset($filtro['giro'])) {
             $cont = 0;
@@ -150,7 +158,7 @@ class Reportes_controller extends CI_Controller{
         //El unico que cambia del dashboard
         $this->load->view("reportes/Reportes", $data_comerciante);
         //------------------------------------
-        $this->load->view("footer/Footer");
+        $this->load->view("footer_reporte/Footer");
 
     }else {
       $data = array('title' => 'Login');

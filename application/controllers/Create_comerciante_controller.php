@@ -62,7 +62,9 @@ class Create_comerciante_controller extends CI_Controller
 
     if ($validate == true) {
       $error = "curp";
-        header("Location:". base_url(). "Create_comerciante_controller/"."?creado=". $error);
+      echo $error;
+      return;
+        //header("Location:". base_url(). "Create_comerciante_controller/"."?creado=". $error);
     }else {
       if ($comerciante['email'] != '') {
         // code...
@@ -79,10 +81,12 @@ class Create_comerciante_controller extends CI_Controller
 
           if ($bool) {
             $creado = "creado";
-            header("Location:". base_url(). "Create_comerciante_controller/"."?creado=". $creado);
+            echo $creado;
+            //header("Location:". base_url(). "Create_comerciante_controller/"."?creado=". $creado);
           }else{
             $creado = "error_creado";
-            header("Location:". base_url(). "Create_comerciante_controller/"."?creado=". $creado);
+            echo $creado;
+            //header("Location:". base_url(). "Create_comerciante_controller/"."?creado=". $creado);
           }
         }
       }else {
@@ -94,10 +98,12 @@ class Create_comerciante_controller extends CI_Controller
 
         if ($bool) {
           $creado = "creado";
-          header("Location:". base_url(). "Create_comerciante_controller/"."?creado=". $creado);
+          echo $creado;
+          //header("Location:". base_url(). "Create_comerciante_controller/"."?creado=". $creado);
         }else{
           $creado = "error_creado";
-          header("Location:". base_url(). "Create_comerciante_controller/"."?creado=". $creado);
+          echo $creado;
+          //header("Location:". base_url(). "Create_comerciante_controller/"."?creado=". $creado);
         }
       }
 

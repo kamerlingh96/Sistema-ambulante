@@ -463,70 +463,11 @@
                  mierror = "Comprueba la extensión de la foto del comerciante a subir. \nSólo se pueden subir archivos con extensiones: " + extensiones_permitidas.join();
                 }else{
                   //submito!
-                 //alert ("Todo correcto. Voy a submitir el formulario.");
-
-                   //alert("enviado");
-                   console.log("hecho");
-                   //event.preventDefault();
-                   var formData = new FormData($("#create_comerciante")[0]);
-                   $.ajax({
-                     url:$("#create_comerciante").attr("action"),
-                     type:$("#create_comerciante").attr("method"),
-                     data:formData,
-                     cache:false,
-                     contentType:false,
-                     processData:false,
-                     success:function(respuesta){
-
-                       if (respuesta == "curp") {
-                         alert("CURP" + respuesta);
-                       }else if (respuesta == "creado") {
-                         alert("Creado Correctamente");
-                         setTimeout(function() {
-                           //your code to be executed after 1 second
-                           var base_url = "<?php echo base_url(); ?>";
-                           window.location=base_url+"Comerciantes_list_controller/list";
-                         }, 2000);
-                       }
-
-                     }
-                   });
-
-
-
-                 //document.formulario1.submit();
-
+                 alert ("Todo correcto. Voy a submitir el formulario.");
+                 document.formulario1.submit();
                  return 1;
                 }
            }
-
-           /*if (x == "creado") {
-             swal("!Buen trabajo!", "Nuevo comerciante creado con éxito", "success")
-           }else if (x == "curp") {
-             swal("!ERROR!", "La CURP ya esta registrada con otro usuario, verifique.", "error")
-           }else if (x == "email") {
-             swal("!ERROR!", "El CORREO ya esta registrado con otro usuario, verifique.", "error")
-           }else if (x == "actualizado") {
-             swal("!Buen trabajo!", "Los datos se actualizaron correctamente.", "success")
-           }else if (x == "cuenta_creada") {
-             swal("!Buen trabajo!", "Nuevo usuario creado con exito!", "success")
-           }else if (x == "cuenta_no_creada") {
-             swal("!Algo salio mal!", "No se logro crear al usuario, verifique datos.", "error")
-           }else if (x == "correo_existente") {
-             swal("!ERROR!", "El CORREO ya esta registrado con otro usuario, verifique.", "error")
-           }else if (x == "Cuenta_eliminada") {
-             swal("!Cuenta Eliminada!", "La cuenta fue borrada correctamente.", "success")
-           }else if (x == "Cuenta_no_eliminada") {
-             swal("!ERROR!", "La cuenta no fue borrada correctamente.", "error")
-           }else if (x == "comentario") {
-             swal("!Reporte realizado!", "El reporte se realizo correctamente.", "success")
-           }else if (x == "error_comentario") {
-             swal("!ERROR!", "El reporte no se realizo correctamente.", "error")
-           }else if (x == "Comentario_eliminado") {
-             swal("!Reporte eliminado!", "El reporte se elimino correctamente.", "success")
-           }else if (x == "Comentario_no_eliminado") {
-             swal("!ERROR!", "El reporte no se elimino correctamente.", "error")
-           }*/
            //si estoy aqui es que no se ha podido submitir
            alert (mierror);
            return 0;

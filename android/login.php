@@ -1,9 +1,10 @@
 <?php
 
 //include 'conexion.php';
-$con = mysqli_connect("[::1]", "sistemaambulantes", "gobambu19", "ambulante");
-
-//$email=$_GET['email'];
+//$con = mysqli_connect("[::1]", "sistemaambulantes", "gobambu19", "ambulante");
+$con = mysqli_connect("localhost", "root", "", "comerciantes");
+//$con = mysqli_connect("localhost", "corpboxc_kamerli", "k11204030290006", "corpboxc_comerciantes");
+//$email=$_POST['email'];
 
 $email = $_POST["email"];
 $password = $_POST["pass"];

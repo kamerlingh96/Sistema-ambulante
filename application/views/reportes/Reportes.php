@@ -1,4 +1,5 @@
 <div id="main-wrapper">
+
     <!-- ============================================================== -->
 
     <!-- ============================================================== -->
@@ -12,19 +13,23 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-5 align-self-center">
-                    <h4 class="page-title">Reportes</h4>
+                    <h3 class="page-title">REPORTES</h3>
                     <div class="d-flex align-items-center">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Reportes</li>
+                                <li class="breadcrumb-item active" aria-current="page">REPORTES</li>
                             </ol>
                         </nav>
                     </div>
                 </div>
             </div>
         </div>
-
+        <style media="screen">
+          .card-body h4,.card-body h3{
+            color: #0faaae;
+          }
+        </style>
         <!-- ============================================================== -->
         <!-- End Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
@@ -198,101 +203,11 @@
 
                 </script>
 
-
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <div class="card-body analytics-info">
-                                <h4 class="card-title">Fijos</h4>
-                                <ul class="list-inline two-part">
-                                    <li>
-                                        <div id="sparklinedash"></div>
-                                    </li>
-                                    <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $total_activos_fijos?></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <div class="card-body analytics-info">
-                                <h4 class="card-title">Semifijos</h4>
-                                <ul class="list-inline two-part">
-                                    <li>
-                                        <div id="sparklinedash2"></div>
-                                    </li>
-                                    <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= $total_activos_semifijos?></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="card">
-                            <div class="card-body analytics-info">
-                                <h4 class="card-title">Ambulantes</h4>
-                                <ul class="list-inline two-part">
-                                    <li>
-                                        <div id="sparklinedash3"></div>
-                                    </li>
-                                    <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= $total_activos_ambulantes?></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card" style="height:100%;">
-                            <div class="card-body">
-                                <h4 class="card-title">Ubicaciones de comerciantes</h4>
-                                <div id="map" class="gmaps" style="display:none;"></div>
-                                <div id="map_2" class="gmaps"></div>
-                                <br>
-                                <div class="row">
-                                  <div class="col-md-12">
-                                    <div class="row">
-                                      <div class="col-md-2">
-                                        <h4>Zona 1: <span class="font-weight-normal"><?= $zona1 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 2: <span class="font-weight-normal"><?= $zona2 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 3: <span class="font-weight-normal"><?= $zona3 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 4: <span class="font-weight-normal"><?= $zona4 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 5: <span class="font-weight-normal"><?= $zona5 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 6: <span class="font-weight-normal"><?= $zona6 ?> Comerciantes</span></h4>
-                                      </div>
-
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-                <br>
-
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Reporte</h4>
+                                <h3 class="card-title">REPORTE</h3>
                                 <?php
                                 //if (isset($giro)) {
                                   //foreach ($giro as $value) {
@@ -307,7 +222,7 @@
 
                                     </div>
                                     <div class="col-md-4 text-center">
-                                      <h4>Filtro</h4>
+                                      <h3>FILTRO</h3>
                                     </div>
                                     <div class="col-md-2">
                                       <div class="form-group">
@@ -422,12 +337,19 @@
 
 
                                    ?>
-
+                                   <div class="row">
+                                     <div class="col-md-12">
+                                       <div class="custom-control custom-checkbox">
+                                         <input type="checkbox" class="custom-control-input" id="seleccionarTodo" value="seleccionarTodo">
+                                         <label class="custom-control-label" for="seleccionarTodo">Seleccionar Todo</label>
+                                       </div>
+                                     </div>
+                                   </div>
                                   <br>
                                   <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Género</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Género</h4>
                                       </div>
                                       <div class="custom-control custom-radio">
                                           <input type="radio" id="genero" name="genero" class="custom-control-input" value="Ambos" <?php if(isset($genero)){if($genero == "Ambos"){echo "checked";}}else{echo "checked";} ?>>
@@ -442,9 +364,9 @@
                                           <label class="custom-control-label" for="genero2">Femenino</label>
                                       </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Giro</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Giro</h4>
                                       </div>
                                       <div class="row">
                                       <?php
@@ -457,7 +379,7 @@
                                           <div class="custom-control custom-checkbox">
                                             <?php
                                              ?>
-                                            <input type="checkbox" class="custom-control-input" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="<?= $giro->nombre_giro ?>1"><?= $giro->nombre_giro ?></label>
                                           </div>
                                         </div>
@@ -467,7 +389,7 @@
                                       ?>
                                       <div class="col-md-6">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="<?= $giro->nombre_giro ?>1"><?= $giro->nombre_giro ?></label>
                                         </div>
                                       </div>
@@ -480,9 +402,9 @@
 
                                     </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Tags</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Tags</h4>
                                       </div>
                                       <div class="row">
                                         <?php
@@ -493,7 +415,7 @@
                                           ?>
                                           <div class="col-md-6">
                                             <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
+                                              <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
                                               <label class="custom-control-label" for="<?= $tags->tag ?>1"><?= $tags->tag ?></label>
                                             </div>
                                           </div>
@@ -503,7 +425,7 @@
                                         ?>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="<?= $tags->tag ?>1"><?= $tags->tag ?></label>
                                           </div>
                                         </div>
@@ -519,44 +441,44 @@
                                   <br>
                                   <br>
                                   <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Zona</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Zona</h4>
                                       </div>
                                       <div class="row">
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona1" value="Zona 1" name="zona[0]" <?php if(isset($zonas)){if("Zona 1" == $zonas_select[0]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona1" value="Zona 1" name="zona[0]" <?php if(isset($zonas)){if("Zona 1" == $zonas_select[0]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona1">Zona 1</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona2" value="Zona 2" name="zona[1]" <?php if(isset($zonas)){if("Zona 2" == $zonas_select[1]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona2" value="Zona 2" name="zona[1]" <?php if(isset($zonas)){if("Zona 2" == $zonas_select[1]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona2">Zona 2</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona3" value="Zona 3" name="zona[2]" <?php if(isset($zonas)){if("Zona 3" == $zonas_select[2]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona3" value="Zona 3" name="zona[2]" <?php if(isset($zonas)){if("Zona 3" == $zonas_select[2]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona3">Zona 3</label>
                                           </div>
                                         </div>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona4" value="Zona 4" name="zona[3]" <?php if(isset($zonas)){if("Zona 4" == $zonas_select[3]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona4" value="Zona 4" name="zona[3]" <?php if(isset($zonas)){if("Zona 4" == $zonas_select[3]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona4">Zona 4</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona5" value="Zona 5" name="zona[4]" <?php if(isset($zonas)){if("Zona 5" == $zonas_select[4]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona5" value="Zona 5" name="zona[4]" <?php if(isset($zonas)){if("Zona 5" == $zonas_select[4]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona5">Zona 5</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona6" value="Zona 6" name="zona[5]" <?php if(isset($zonas)){if("Zona 6" == $zonas_select[5]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona6" value="Zona 6" name="zona[5]" <?php if(isset($zonas)){if("Zona 6" == $zonas_select[5]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona6">Zona 6</label>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Estructura</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Estructura</h4>
                                       </div>
                                       <div class="row">
                                         <?php
@@ -567,7 +489,7 @@
                                           ?>
                                           <div class="col-md-6">
                                             <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
+                                              <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
                                               <label class="custom-control-label" for="<?= $estructura->estructura ?>1"><?= $estructura->estructura ?></label>
                                             </div>
                                           </div>
@@ -577,7 +499,7 @@
                                         ?>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="<?= $estructura->estructura ?>1"><?= $estructura->estructura ?></label>
                                           </div>
                                         </div>
@@ -589,71 +511,71 @@
                                         ?>
                                       </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Estado</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Estado</h4>
                                       </div>
                                       <div class="col-md-12">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Activo1" value="Activo" name="estado[0]" <?php if(isset($estados)){if($estados_select[0] == "Activo"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Activo1" value="Activo" name="estado[0]" <?php if(isset($estados)){if($estados_select[0] == "Activo"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Activo1">Activo</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Inactivo1" value="Inactivo" name="estado[1]" <?php if(isset($estados)){if($estados_select[1] == "Inactivo"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Inactivo1" value="Inactivo" name="estado[1]" <?php if(isset($estados)){if($estados_select[1] == "Inactivo"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Inactivo1">Inactivo</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Vencido1" value="Vencido" name="estado[2]" <?php if(isset($estados)){if($estados_select[2] == "Vencido"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Vencido1" value="Vencido" name="estado[2]" <?php if(isset($estados)){if($estados_select[2] == "Vencido"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Vencido1">Vencido</label>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                   <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Observaciones</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Observaciones</h4>
                                       </div>
                                       <div class="col-md-12">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones1" value="Todo en Orden" name="observaciones[0]" <?php if(isset($observaciones)){if($observaciones_select[0] == "Todo en Orden"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones1" value="Todo en Orden" name="observaciones[0]" <?php if(isset($observaciones)){if($observaciones_select[0] == "Todo en Orden"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones1">Todo en Orden</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones2" value="Fuera de horario" name="observaciones[1]" <?php if(isset($observaciones)){if($observaciones_select[1] == "Fuera de horario"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones2" value="Fuera de horario" name="observaciones[1]" <?php if(isset($observaciones)){if($observaciones_select[1] == "Fuera de horario"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones2">Fuera de horario</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones3" value="Reincidencia" name="observaciones[2]" <?php if(isset($observaciones)){if($observaciones_select[2] == "Reincidencia"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones3" value="Reincidencia" name="observaciones[2]" <?php if(isset($observaciones)){if($observaciones_select[2] == "Reincidencia"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones3">Reincidencia</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones4" value="Fuera de zona" name="observaciones[3]" <?php if(isset($observaciones)){if($observaciones_select[3] == "Fuera de zona"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones4" value="Fuera de zona" name="observaciones[3]" <?php if(isset($observaciones)){if($observaciones_select[3] == "Fuera de zona"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones4">Fuera de zona</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones5" value="No cuenta con permiso" name="observaciones[4]" <?php if(isset($observaciones)){if($observaciones_select[4] == "No cuenta con permiso"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones5" value="No cuenta con permiso" name="observaciones[4]" <?php if(isset($observaciones)){if($observaciones_select[4] == "No cuenta con permiso"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones5">No cuenta con permiso</label>
                                         </div>
 
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones6" value="Estado de ebriedad" name="observaciones[5]" <?php if(isset($observaciones)){if($observaciones_select[5] == "Estado de ebriedad"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones6" value="Estado de ebriedad" name="observaciones[5]" <?php if(isset($observaciones)){if($observaciones_select[5] == "Estado de ebriedad"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones6">Estado de ebriedad</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones7" value="Invadir banqueta" name="observaciones[6]" <?php if(isset($observaciones)){if($observaciones_select[6] == "Invadir banqueta"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones7" value="Invadir banqueta" name="observaciones[6]" <?php if(isset($observaciones)){if($observaciones_select[6] == "Invadir banqueta"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones7">Invadir banqueta</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones8" value="Hacer caso omiso a las recomendaciones" name="observaciones[7]" <?php if(isset($observaciones)){if($observaciones_select[7] == "Hacer caso omiso a las recomendaciones"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones8" value="Hacer caso omiso a las recomendaciones" name="observaciones[7]" <?php if(isset($observaciones)){if($observaciones_select[7] == "Hacer caso omiso a las recomendaciones"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones8">Hacer caso omiso a las recomendaciones</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones9" value="Amenazas y/o insulto a la autoridad" name="observaciones[8]" <?php if(isset($observaciones)){if($observaciones_select[8] == "Amenazas y/o insulto a la autoridad"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones9" value="Amenazas y/o insulto a la autoridad" name="observaciones[8]" <?php if(isset($observaciones)){if($observaciones_select[8] == "Amenazas y/o insulto a la autoridad"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones9">Amenazas y/o insulto a la autoridad</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones10" value="Otro" name="observaciones[9]" <?php if(isset($observaciones)){if($observaciones_select[9] == "Otro"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones10" value="Otro" name="observaciones[9]" <?php if(isset($observaciones)){if($observaciones_select[9] == "Otro"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones10">Otro</label>
                                         </div>
                                       </div>
@@ -930,19 +852,20 @@
 
                                    </script>
 
-                                  <h4 class="card-title">Grafica Comparativa</h4>
+
+                                  <h3 class="card-title">Grafica Comparativa</h3>
                                   <div class="row">
-                                    <div class="col-md-8">
+                                    <!-- <div class="col-md-8">
                                       <div id="area-chart"></div>
-                                    </div>
-                                    <div class="col-md-4">
+                                    </div> -->
+                                    <!-- <div class="col-md-4"> -->
 
                                       <?php
                                       if ($genero == "Ambos") {
                                         ?>
-                                        <h5>Total: <?=$cont_ambos?></h5>
-                                        <h5>Masculinos: <?=$cont_masculino?></h5>
-                                        <h5>Femeninos: <?=$cont_femenino?></h5>
+                                        <!-- <h4>Total: <?=$cont_ambos?></h4>
+                                        <h4>Masculinos: <?=$cont_masculino?></h4>
+                                        <h4>Femeninos: <?=$cont_femenino?></h4> -->
 
                                         <?php
                                       }
@@ -950,8 +873,8 @@
                                        <?php
                                        if ($genero == "Masculino") {
                                          ?>
-                                         <h5>Total: <?=$cont_ambos?></h5>
-                                         <h5>Masculinos: <?=$cont_masculino?></h5>
+                                         <!-- <h4>Total: <?=$cont_ambos?></h4>
+                                         <h4>Masculinos: <?=$cont_masculino?></h4> -->
 
                                          <?php
                                        }
@@ -959,14 +882,50 @@
                                         <?php
                                         if ($genero == "Femenino") {
                                           ?>
-                                          <h5>Total: <?=$cont_ambos?></h5>
-                                          <h5>Femeninos: <?=$cont_femenino?></h5>
+                                          <!-- <h4>Total: <?=$cont_ambos?></h4>
+                                          <h4>Femeninos: <?=$cont_femenino?></h4> -->
 
                                           <?php
                                         }
                                          ?>
+                                    <!-- </div> -->
+                                  </div>
+
+
+                                  <script type="text/javascript">
+                                    var ambulantesMasculino = <?php echo $cont_masculino;?>;
+                                    var ambulantesFemenino = <?php echo $cont_femenino;?>;
+                                  </script>
+
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div id="basic-pie" style="height:400px;"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div id="basic-pie2" style="height:400px;"></div>
                                     </div>
                                   </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div id="stacked-bar" style="height:400px;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div id="stacked-bar2" style="height:400px;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div id="stacked-bar3" style="height:200px;"></div>
+                                    </div>
+                                  </div>
+
+
+
 
 
                                   <?php
@@ -980,7 +939,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Giro</h4>
+                                          <h3>Giro</h3>
                                           <?php
                                           foreach ($giros_select as $key => $giro) {
                                             if ($giro != "null") {
@@ -988,7 +947,13 @@
                                               echo "<br>";
                                             }
                                           }
+
                                            ?>
+
+                                           <script type="text/javascript">
+                                             var girosSeleccionados=<?php echo json_encode($giros_select);?>;
+                                             var girosCantidad=<?php echo json_encode($cont_giros);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
@@ -999,7 +964,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Tags</h4>
+                                          <h3>Tags</h3>
                                           <?php
                                           foreach ($tags_select as $key => $tag) {
                                             if ($tag != "null") {
@@ -1018,7 +983,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Zonas</h4>
+                                          <h3>Zonas</h3>
                                           <?php
                                           foreach ($zonas_select as $key => $zona) {
                                             if ($zona != "null") {
@@ -1027,6 +992,11 @@
                                             }
                                           }
                                            ?>
+                                           <script type="text/javascript">
+                                             var zonasSeleccionados=<?php echo json_encode($zonas_select);?>;
+                                             var zonasCantidad=<?php echo json_encode($cont_zonas);?>;
+                                           </script>
+
                                         </div>
                                       <?php
                                     }
@@ -1037,7 +1007,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Estructuras</h4>
+                                          <h3>Estructuras</h3>
                                           <?php
                                           foreach ($estructuras_select as $key => $estructura) {
                                             if ($estructura != "null") {
@@ -1046,6 +1016,11 @@
                                             }
                                           }
                                            ?>
+
+                                           <script type="text/javascript">
+                                             var estructurasSeleccionados=<?php echo json_encode($estructuras_select);?>;
+                                             var estructurasCantidad=<?php echo json_encode($cont_estructuras);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
@@ -1056,7 +1031,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Estados</h4>
+                                          <h3>Estados</h3>
                                           <?php
                                           foreach ($estados as $key => $estado) {
                                             if ($estado != "null") {
@@ -1065,6 +1040,10 @@
                                             }
                                           }
                                            ?>
+                                           <script type="text/javascript">
+                                             var estadoSeleccionados=<?php echo json_encode($estados);?>;
+                                             var estadoCantidad=<?php echo json_encode($cont_estados);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
@@ -1074,7 +1053,7 @@
                                     <br>
                                       <div class="col-md-4 text-left">
                                         <br>
-                                        <h4>Observaciones</h4>
+                                        <h3>Observaciones</h3>
                                         <?php
                                         foreach ($observaciones as $key => $estado) {
                                           if ($estado != "null") {
@@ -1100,6 +1079,98 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body analytics-info">
+                                <h3 class="card-title">Fijos</h3>
+                                <ul class="list-inline two-part">
+                                    <li>
+                                        <div id="sparklinedash"></div>
+                                    </li>
+                                    <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $total_activos_fijos?></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body analytics-info">
+                                <h3 class="card-title">Semifijos</h3>
+                                <ul class="list-inline two-part">
+                                    <li>
+                                        <div id="sparklinedash2"></div>
+                                    </li>
+                                    <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= $total_activos_semifijos?></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body analytics-info">
+                                <h3 class="card-title">Ambulantes</h3>
+                                <ul class="list-inline two-part">
+                                    <li>
+                                        <div id="sparklinedash3"></div>
+                                    </li>
+                                    <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= $total_activos_ambulantes?></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card" style="height:100%;">
+                            <div class="card-body">
+                                <h3 class="card-title">Ubicaciones de comerciantes</h3>
+                                <div id="map" class="gmaps" style="display:none;"></div>
+                                <div id="map_2" class="gmaps"></div>
+                                <br>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="row">
+                                      <div class="col-md-2">
+                                        <h3>Zona 1: <span class="font-weight-normal"><?= $zona1 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 2: <span class="font-weight-normal"><?= $zona2 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 3: <span class="font-weight-normal"><?= $zona3 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 4: <span class="font-weight-normal"><?= $zona4 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 5: <span class="font-weight-normal"><?= $zona5 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 6: <span class="font-weight-normal"><?= $zona6 ?> Comerciantes</span></h3>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <br>
+
+
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -1278,101 +1349,11 @@
 
                 </script>
 
-
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <div class="card-body analytics-info">
-                                <h4 class="card-title">Fijos</h4>
-                                <ul class="list-inline two-part">
-                                    <li>
-                                        <div id="sparklinedash"></div>
-                                    </li>
-                                    <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $total_activos_fijos?></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <div class="card-body analytics-info">
-                                <h4 class="card-title">Semifijos</h4>
-                                <ul class="list-inline two-part">
-                                    <li>
-                                        <div id="sparklinedash2"></div>
-                                    </li>
-                                    <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= $total_activos_semifijos?></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="card">
-                            <div class="card-body analytics-info">
-                                <h4 class="card-title">Ambulantes</h4>
-                                <ul class="list-inline two-part">
-                                    <li>
-                                        <div id="sparklinedash3"></div>
-                                    </li>
-                                    <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= $total_activos_ambulantes?></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card" style="height:100%;">
-                            <div class="card-body">
-                                <h4 class="card-title">Ubicaciones de comerciantes</h4>
-                                <div id="map" class="gmaps" style="display:none;"></div>
-                                <div id="map_2" class="gmaps"></div>
-                                <br>
-                                <div class="row">
-                                  <div class="col-md-12">
-                                    <div class="row">
-                                      <div class="col-md-2">
-                                        <h4>Zona 1: <span class="font-weight-normal"><?= $zona1 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 2: <span class="font-weight-normal"><?= $zona2 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 3: <span class="font-weight-normal"><?= $zona3 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 4: <span class="font-weight-normal"><?= $zona4 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 5: <span class="font-weight-normal"><?= $zona5 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 6: <span class="font-weight-normal"><?= $zona6 ?> Comerciantes</span></h4>
-                                      </div>
-
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-                <br>
-
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Reporte</h4>
+                                <h3 class="card-title">REPORTE</h3>
                                 <?php
                                 //if (isset($giro)) {
                                   //foreach ($giro as $value) {
@@ -1387,7 +1368,7 @@
 
                                     </div>
                                     <div class="col-md-4 text-center">
-                                      <h4>Filtro</h4>
+                                      <h3>FILTRO</h3>
                                     </div>
                                     <div class="col-md-2">
                                       <div class="form-group">
@@ -1502,12 +1483,19 @@
 
 
                                    ?>
-
+                                   <div class="row">
+                                     <div class="col-md-12">
+                                       <div class="custom-control custom-checkbox">
+                                         <input type="checkbox" class="custom-control-input" id="seleccionarTodo" value="seleccionarTodo">
+                                         <label class="custom-control-label" for="seleccionarTodo">Seleccionar Todo</label>
+                                       </div>
+                                     </div>
+                                   </div>
                                   <br>
                                   <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Género</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Género</h4>
                                       </div>
                                       <div class="custom-control custom-radio">
                                           <input type="radio" id="genero" name="genero" class="custom-control-input" value="Ambos" <?php if(isset($genero)){if($genero == "Ambos"){echo "checked";}}else{echo "checked";} ?>>
@@ -1522,9 +1510,9 @@
                                           <label class="custom-control-label" for="genero2">Femenino</label>
                                       </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Giro</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Giro</h4>
                                       </div>
                                       <div class="row">
                                       <?php
@@ -1537,7 +1525,7 @@
                                           <div class="custom-control custom-checkbox">
                                             <?php
                                              ?>
-                                            <input type="checkbox" class="custom-control-input" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="<?= $giro->nombre_giro ?>1"><?= $giro->nombre_giro ?></label>
                                           </div>
                                         </div>
@@ -1547,7 +1535,7 @@
                                       ?>
                                       <div class="col-md-6">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="<?= $giro->nombre_giro ?>1"><?= $giro->nombre_giro ?></label>
                                         </div>
                                       </div>
@@ -1560,9 +1548,9 @@
 
                                     </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Tags</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Tags</h4>
                                       </div>
                                       <div class="row">
                                         <?php
@@ -1573,7 +1561,7 @@
                                           ?>
                                           <div class="col-md-6">
                                             <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
+                                              <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
                                               <label class="custom-control-label" for="<?= $tags->tag ?>1"><?= $tags->tag ?></label>
                                             </div>
                                           </div>
@@ -1583,7 +1571,7 @@
                                         ?>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="<?= $tags->tag ?>1"><?= $tags->tag ?></label>
                                           </div>
                                         </div>
@@ -1599,44 +1587,44 @@
                                   <br>
                                   <br>
                                   <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Zona</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Zona</h4>
                                       </div>
                                       <div class="row">
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona1" value="Zona 1" name="zona[0]" <?php if(isset($zonas)){if("Zona 1" == $zonas_select[0]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona1" value="Zona 1" name="zona[0]" <?php if(isset($zonas)){if("Zona 1" == $zonas_select[0]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona1">Zona 1</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona2" value="Zona 2" name="zona[1]" <?php if(isset($zonas)){if("Zona 2" == $zonas_select[1]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona2" value="Zona 2" name="zona[1]" <?php if(isset($zonas)){if("Zona 2" == $zonas_select[1]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona2">Zona 2</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona3" value="Zona 3" name="zona[2]" <?php if(isset($zonas)){if("Zona 3" == $zonas_select[2]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona3" value="Zona 3" name="zona[2]" <?php if(isset($zonas)){if("Zona 3" == $zonas_select[2]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona3">Zona 3</label>
                                           </div>
                                         </div>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona4" value="Zona 4" name="zona[3]" <?php if(isset($zonas)){if("Zona 4" == $zonas_select[3]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona4" value="Zona 4" name="zona[3]" <?php if(isset($zonas)){if("Zona 4" == $zonas_select[3]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona4">Zona 4</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona5" value="Zona 5" name="zona[4]" <?php if(isset($zonas)){if("Zona 5" == $zonas_select[4]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona5" value="Zona 5" name="zona[4]" <?php if(isset($zonas)){if("Zona 5" == $zonas_select[4]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona5">Zona 5</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona6" value="Zona 6" name="zona[5]" <?php if(isset($zonas)){if("Zona 6" == $zonas_select[5]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona6" value="Zona 6" name="zona[5]" <?php if(isset($zonas)){if("Zona 6" == $zonas_select[5]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona6">Zona 6</label>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Estructura</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Estructura</h4>
                                       </div>
                                       <div class="row">
                                         <?php
@@ -1647,7 +1635,7 @@
                                           ?>
                                           <div class="col-md-6">
                                             <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
+                                              <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
                                               <label class="custom-control-label" for="<?= $estructura->estructura ?>1"><?= $estructura->estructura ?></label>
                                             </div>
                                           </div>
@@ -1657,7 +1645,7 @@
                                         ?>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="<?= $estructura->estructura ?>1"><?= $estructura->estructura ?></label>
                                           </div>
                                         </div>
@@ -1669,71 +1657,71 @@
                                         ?>
                                       </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Estado</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Estado</h4>
                                       </div>
                                       <div class="col-md-12">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Activo1" value="Activo" name="estado[0]" <?php if(isset($estados)){if($estados_select[0] == "Activo"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Activo1" value="Activo" name="estado[0]" <?php if(isset($estados)){if($estados_select[0] == "Activo"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Activo1">Activo</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Inactivo1" value="Inactivo" name="estado[1]" <?php if(isset($estados)){if($estados_select[1] == "Inactivo"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Inactivo1" value="Inactivo" name="estado[1]" <?php if(isset($estados)){if($estados_select[1] == "Inactivo"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Inactivo1">Inactivo</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Vencido1" value="Vencido" name="estado[2]" <?php if(isset($estados)){if($estados_select[2] == "Vencido"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Vencido1" value="Vencido" name="estado[2]" <?php if(isset($estados)){if($estados_select[2] == "Vencido"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Vencido1">Vencido</label>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                   <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Observaciones</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Observaciones</h4>
                                       </div>
                                       <div class="col-md-12">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones1" value="Todo en Orden" name="observaciones[0]" <?php if(isset($observaciones)){if($observaciones_select[0] == "Todo en Orden"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones1" value="Todo en Orden" name="observaciones[0]" <?php if(isset($observaciones)){if($observaciones_select[0] == "Todo en Orden"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones1">Todo en Orden</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones2" value="Fuera de horario" name="observaciones[1]" <?php if(isset($observaciones)){if($observaciones_select[1] == "Fuera de horario"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones2" value="Fuera de horario" name="observaciones[1]" <?php if(isset($observaciones)){if($observaciones_select[1] == "Fuera de horario"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones2">Fuera de horario</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones3" value="Reincidencia" name="observaciones[2]" <?php if(isset($observaciones)){if($observaciones_select[2] == "Reincidencia"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones3" value="Reincidencia" name="observaciones[2]" <?php if(isset($observaciones)){if($observaciones_select[2] == "Reincidencia"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones3">Reincidencia</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones4" value="Fuera de zona" name="observaciones[3]" <?php if(isset($observaciones)){if($observaciones_select[3] == "Fuera de zona"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones4" value="Fuera de zona" name="observaciones[3]" <?php if(isset($observaciones)){if($observaciones_select[3] == "Fuera de zona"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones4">Fuera de zona</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones5" value="No cuenta con permiso" name="observaciones[4]" <?php if(isset($observaciones)){if($observaciones_select[4] == "No cuenta con permiso"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones5" value="No cuenta con permiso" name="observaciones[4]" <?php if(isset($observaciones)){if($observaciones_select[4] == "No cuenta con permiso"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones5">No cuenta con permiso</label>
                                         </div>
 
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones6" value="Estado de ebriedad" name="observaciones[5]" <?php if(isset($observaciones)){if($observaciones_select[5] == "Estado de ebriedad"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones6" value="Estado de ebriedad" name="observaciones[5]" <?php if(isset($observaciones)){if($observaciones_select[5] == "Estado de ebriedad"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones6">Estado de ebriedad</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones7" value="Invadir banqueta" name="observaciones[6]" <?php if(isset($observaciones)){if($observaciones_select[6] == "Invadir banqueta"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones7" value="Invadir banqueta" name="observaciones[6]" <?php if(isset($observaciones)){if($observaciones_select[6] == "Invadir banqueta"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones7">Invadir banqueta</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones8" value="Hacer caso omiso a las recomendaciones" name="observaciones[7]" <?php if(isset($observaciones)){if($observaciones_select[7] == "Hacer caso omiso a las recomendaciones"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones8" value="Hacer caso omiso a las recomendaciones" name="observaciones[7]" <?php if(isset($observaciones)){if($observaciones_select[7] == "Hacer caso omiso a las recomendaciones"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones8">Hacer caso omiso a las recomendaciones</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones9" value="Amenazas y/o insulto a la autoridad" name="observaciones[8]" <?php if(isset($observaciones)){if($observaciones_select[8] == "Amenazas y/o insulto a la autoridad"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones9" value="Amenazas y/o insulto a la autoridad" name="observaciones[8]" <?php if(isset($observaciones)){if($observaciones_select[8] == "Amenazas y/o insulto a la autoridad"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones9">Amenazas y/o insulto a la autoridad</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones10" value="Otro" name="observaciones[9]" <?php if(isset($observaciones)){if($observaciones_select[9] == "Otro"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones10" value="Otro" name="observaciones[9]" <?php if(isset($observaciones)){if($observaciones_select[9] == "Otro"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones10">Otro</label>
                                         </div>
                                       </div>
@@ -2009,8 +1997,8 @@
 
                                    </script>
 
-                                  <h4 class="card-title">Grafica Comparativa</h4>
-                                  <div class="row">
+                                  <h3 class="card-title">Grafica Comparativa</h3>
+                                  <!-- <div class="row">
                                     <div class="col-md-8">
                                       <div id="area-chart"></div>
                                     </div>
@@ -2019,9 +2007,9 @@
                                       <?php
                                       if ($genero == "Ambos") {
                                         ?>
-                                        <h5>Total: <?=$cont_ambos?></h5>
-                                        <h5>Masculinos: <?=$cont_masculino?></h5>
-                                        <h5>Femeninos: <?=$cont_femenino?></h5>
+                                        <h4>Total: <?=$cont_ambos?></h4>
+                                        <h4>Masculinos: <?=$cont_masculino?></h4>
+                                        <h4>Femeninos: <?=$cont_femenino?></h4>
 
                                         <?php
                                       }
@@ -2029,8 +2017,8 @@
                                        <?php
                                        if ($genero == "Masculino") {
                                          ?>
-                                         <h5>Total: <?=$cont_ambos?></h5>
-                                         <h5>Masculinos: <?=$cont_masculino?></h5>
+                                         <h4>Total: <?=$cont_ambos?></h4>
+                                         <h4>Masculinos: <?=$cont_masculino?></h4>
 
                                          <?php
                                        }
@@ -2038,12 +2026,46 @@
                                         <?php
                                         if ($genero == "Femenino") {
                                           ?>
-                                          <h5>Total: <?=$cont_ambos?></h5>
-                                          <h5>Femeninos: <?=$cont_femenino?></h5>
+                                          <h4>Total: <?=$cont_ambos?></h4>
+                                          <h4>Femeninos: <?=$cont_femenino?></h4>
 
                                           <?php
                                         }
                                          ?>
+                                    </div>
+                                  </div> -->
+
+
+
+                                  <script type="text/javascript">
+                                    var ambulantesMasculino = <?php echo $cont_masculino;?>;
+                                    var ambulantesFemenino = <?php echo $cont_femenino;?>;
+                                  </script>
+
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div id="basic-pie" style="height:400px;"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div id="basic-pie2" style="height:400px;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div id="stacked-bar" style="height:400px;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div id="stacked-bar2" style="height:400px;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div id="stacked-bar3" style="height:200px;"></div>
                                     </div>
                                   </div>
 
@@ -2059,7 +2081,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Giro</h4>
+                                          <h3>Giro</h3>
                                           <?php
                                           foreach ($giros_select as $key => $giro) {
                                             if ($giro != "null") {
@@ -2068,6 +2090,10 @@
                                             }
                                           }
                                            ?>
+                                           <script type="text/javascript">
+                                             var girosSeleccionados=<?php echo json_encode($giros_select);?>;
+                                             var girosCantidad=<?php echo json_encode($cont_giros);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
@@ -2078,7 +2104,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Tags</h4>
+                                          <h3>Tags</h3>
                                           <?php
                                           foreach ($tags_select as $key => $tag) {
                                             if ($tag != "null") {
@@ -2097,7 +2123,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Zonas</h4>
+                                          <h3>Zonas</h3>
                                           <?php
                                           foreach ($zonas_select as $key => $zona) {
                                             if ($zona != "null") {
@@ -2106,6 +2132,10 @@
                                             }
                                           }
                                            ?>
+                                           <script type="text/javascript">
+                                             var zonasSeleccionados=<?php echo json_encode($zonas_select);?>;
+                                             var zonasCantidad=<?php echo json_encode($cont_zonas);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
@@ -2116,7 +2146,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Estructuras</h4>
+                                          <h3>Estructuras</h3>
                                           <?php
                                           foreach ($estructuras_select as $key => $estructura) {
                                             if ($estructura != "null") {
@@ -2125,6 +2155,10 @@
                                             }
                                           }
                                            ?>
+                                           <script type="text/javascript">
+                                             var estructurasSeleccionados=<?php echo json_encode($estructuras_select);?>;
+                                             var estructurasCantidad=<?php echo json_encode($cont_estructuras);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
@@ -2135,7 +2169,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Estados</h4>
+                                          <h3>Estados</h3>
                                           <?php
                                           foreach ($estados as $key => $estado) {
                                             if ($estado != "null") {
@@ -2144,6 +2178,10 @@
                                             }
                                           }
                                            ?>
+                                           <script type="text/javascript">
+                                             var estadoSeleccionados=<?php echo json_encode($estados);?>;
+                                             var estadoCantidad=<?php echo json_encode($cont_estados);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
@@ -2153,7 +2191,7 @@
                                     <br>
                                       <div class="col-md-4 text-left">
                                         <br>
-                                        <h4>Observaciones</h4>
+                                        <h3>Observaciones</h3>
                                         <?php
                                         foreach ($observaciones as $key => $estado) {
                                           if ($estado != "null") {
@@ -2179,6 +2217,101 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body analytics-info">
+                                <h3 class="card-title">Fijos</h3>
+                                <ul class="list-inline two-part">
+                                    <li>
+                                        <div id="sparklinedash"></div>
+                                    </li>
+                                    <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $total_activos_fijos?></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body analytics-info">
+                                <h3 class="card-title">Semifijos</h3>
+                                <ul class="list-inline two-part">
+                                    <li>
+                                        <div id="sparklinedash2"></div>
+                                    </li>
+                                    <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= $total_activos_semifijos?></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body analytics-info">
+                                <h3 class="card-title">Ambulantes</h3>
+                                <ul class="list-inline two-part">
+                                    <li>
+                                        <div id="sparklinedash3"></div>
+                                    </li>
+                                    <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= $total_activos_ambulantes?></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card" style="height:100%;">
+                            <div class="card-body">
+                                <h3 class="card-title">Ubicaciones de comerciantes</h3>
+                                <div id="map" class="gmaps" style="display:none;"></div>
+                                <div id="map_2" class="gmaps"></div>
+                                <br>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="row">
+                                      <div class="col-md-2">
+                                        <h3>Zona 1: <span class="font-weight-normal"><?= $zona1 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 2: <span class="font-weight-normal"><?= $zona2 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 3: <span class="font-weight-normal"><?= $zona3 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 4: <span class="font-weight-normal"><?= $zona4 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 5: <span class="font-weight-normal"><?= $zona5 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 6: <span class="font-weight-normal"><?= $zona6 ?> Comerciantes</span></h3>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <br>
+
+
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -2210,7 +2343,7 @@
                 $dia7 = date("Y-m-d",mktime(0, 0, 0, date('m'),date('d')-6,date('Y')));
 
                 $dias_semana = array($dia1,$dia2,$dia3,$dia4,$dia5,$dia6,$dia7);
-                echo $delmes;
+                //echo $delmes;
 
                 $dias_activos_fijos = array(0, 0, 0, 0, 0, 0, 0);
                 $total_activos_fijos = 0;
@@ -2357,101 +2490,11 @@
 
                 </script>
 
-
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <div class="card-body analytics-info">
-                                <h4 class="card-title">Fijos</h4>
-                                <ul class="list-inline two-part">
-                                    <li>
-                                        <div id="sparklinedash"></div>
-                                    </li>
-                                    <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $total_activos_fijos?></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <div class="card-body analytics-info">
-                                <h4 class="card-title">Semifijos</h4>
-                                <ul class="list-inline two-part">
-                                    <li>
-                                        <div id="sparklinedash2"></div>
-                                    </li>
-                                    <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= $total_activos_semifijos?></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="card">
-                            <div class="card-body analytics-info">
-                                <h4 class="card-title">Ambulantes</h4>
-                                <ul class="list-inline two-part">
-                                    <li>
-                                        <div id="sparklinedash3"></div>
-                                    </li>
-                                    <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= $total_activos_ambulantes?></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card" style="height:100%;">
-                            <div class="card-body">
-                                <h4 class="card-title">Ubicaciones de comerciantes</h4>
-                                <div id="map" class="gmaps" style="display:none;"></div>
-                                <div id="map_2" class="gmaps"></div>
-                                <br>
-                                <div class="row">
-                                  <div class="col-md-12">
-                                    <div class="row">
-                                      <div class="col-md-2">
-                                        <h4>Zona 1: <span class="font-weight-normal"><?= $zona1 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 2: <span class="font-weight-normal"><?= $zona2 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 3: <span class="font-weight-normal"><?= $zona3 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 4: <span class="font-weight-normal"><?= $zona4 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 5: <span class="font-weight-normal"><?= $zona5 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 6: <span class="font-weight-normal"><?= $zona6 ?> Comerciantes</span></h4>
-                                      </div>
-
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-                <br>
-
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Reporte</h4>
+                                <h3 class="card-title">REPORTE</h3>
                                 <?php
                                 //if (isset($giro)) {
                                   //foreach ($giro as $value) {
@@ -2466,7 +2509,7 @@
 
                                     </div>
                                     <div class="col-md-4 text-center">
-                                      <h4>Filtro</h4>
+                                      <h3>FILTRO</h3>
                                     </div>
                                     <div class="col-md-2">
                                       <div class="form-group">
@@ -2580,12 +2623,19 @@
 
 
                                    ?>
-
+                                   <div class="row">
+                                     <div class="col-md-12">
+                                       <div class="custom-control custom-checkbox">
+                                         <input type="checkbox" class="custom-control-input" id="seleccionarTodo" value="seleccionarTodo">
+                                         <label class="custom-control-label" for="seleccionarTodo">Seleccionar Todo</label>
+                                       </div>
+                                     </div>
+                                   </div>
                                   <br>
                                   <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Género</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Género</h4>
                                       </div>
                                       <div class="custom-control custom-radio">
                                           <input type="radio" id="genero" name="genero" class="custom-control-input" value="Ambos" <?php if(isset($genero)){if($genero == "Ambos"){echo "checked";}}else{echo "checked";} ?>>
@@ -2600,9 +2650,9 @@
                                           <label class="custom-control-label" for="genero2">Femenino</label>
                                       </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Giro</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Giro</h4>
                                       </div>
                                       <div class="row">
                                       <?php
@@ -2615,7 +2665,7 @@
                                           <div class="custom-control custom-checkbox">
                                             <?php
                                              ?>
-                                            <input type="checkbox" class="custom-control-input" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="<?= $giro->nombre_giro ?>1"><?= $giro->nombre_giro ?></label>
                                           </div>
                                         </div>
@@ -2625,7 +2675,7 @@
                                       ?>
                                       <div class="col-md-6">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="<?= $giro->nombre_giro ?>1"><?= $giro->nombre_giro ?></label>
                                         </div>
                                       </div>
@@ -2638,9 +2688,9 @@
 
                                     </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Tags</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Tags</h4>
                                       </div>
                                       <div class="row">
                                         <?php
@@ -2651,7 +2701,7 @@
                                           ?>
                                           <div class="col-md-6">
                                             <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
+                                              <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
                                               <label class="custom-control-label" for="<?= $tags->tag ?>1"><?= $tags->tag ?></label>
                                             </div>
                                           </div>
@@ -2661,7 +2711,7 @@
                                         ?>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="<?= $tags->tag ?>1"><?= $tags->tag ?></label>
                                           </div>
                                         </div>
@@ -2677,44 +2727,44 @@
                                   <br>
                                   <br>
                                   <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Zona</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Zona</h4>
                                       </div>
                                       <div class="row">
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona1" value="Zona 1" name="zona[0]" <?php if(isset($zonas)){if("Zona 1" == $zonas_select[0]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona1" value="Zona 1" name="zona[0]" <?php if(isset($zonas)){if("Zona 1" == $zonas_select[0]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona1">Zona 1</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona2" value="Zona 2" name="zona[1]" <?php if(isset($zonas)){if("Zona 2" == $zonas_select[1]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona2" value="Zona 2" name="zona[1]" <?php if(isset($zonas)){if("Zona 2" == $zonas_select[1]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona2">Zona 2</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona3" value="Zona 3" name="zona[2]" <?php if(isset($zonas)){if("Zona 3" == $zonas_select[2]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona3" value="Zona 3" name="zona[2]" <?php if(isset($zonas)){if("Zona 3" == $zonas_select[2]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona3">Zona 3</label>
                                           </div>
                                         </div>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona4" value="Zona 4" name="zona[3]" <?php if(isset($zonas)){if("Zona 4" == $zonas_select[3]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona4" value="Zona 4" name="zona[3]" <?php if(isset($zonas)){if("Zona 4" == $zonas_select[3]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona4">Zona 4</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona5" value="Zona 5" name="zona[4]" <?php if(isset($zonas)){if("Zona 5" == $zonas_select[4]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona5" value="Zona 5" name="zona[4]" <?php if(isset($zonas)){if("Zona 5" == $zonas_select[4]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona5">Zona 5</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona6" value="Zona 6" name="zona[5]" <?php if(isset($zonas)){if("Zona 6" == $zonas_select[5]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona6" value="Zona 6" name="zona[5]" <?php if(isset($zonas)){if("Zona 6" == $zonas_select[5]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona6">Zona 6</label>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Estructura</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Estructura</h4>
                                       </div>
                                       <div class="row">
                                         <?php
@@ -2725,7 +2775,7 @@
                                           ?>
                                           <div class="col-md-6">
                                             <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
+                                              <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
                                               <label class="custom-control-label" for="<?= $estructura->estructura ?>1"><?= $estructura->estructura ?></label>
                                             </div>
                                           </div>
@@ -2735,7 +2785,7 @@
                                         ?>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="<?= $estructura->estructura ?>1"><?= $estructura->estructura ?></label>
                                           </div>
                                         </div>
@@ -2747,71 +2797,71 @@
                                         ?>
                                       </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Estado</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Estado</h4>
                                       </div>
                                       <div class="col-md-12">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Activo1" value="Activo" name="estado[0]" <?php if(isset($estados)){if($estados_select[0] == "Activo"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Activo1" value="Activo" name="estado[0]" <?php if(isset($estados)){if($estados_select[0] == "Activo"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Activo1">Activo</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Inactivo1" value="Inactivo" name="estado[1]" <?php if(isset($estados)){if($estados_select[1] == "Inactivo"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Inactivo1" value="Inactivo" name="estado[1]" <?php if(isset($estados)){if($estados_select[1] == "Inactivo"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Inactivo1">Inactivo</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Vencido1" value="Vencido" name="estado[2]" <?php if(isset($estados)){if($estados_select[2] == "Vencido"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Vencido1" value="Vencido" name="estado[2]" <?php if(isset($estados)){if($estados_select[2] == "Vencido"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Vencido1">Vencido</label>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                   <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Observaciones</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Observaciones</h4>
                                       </div>
                                       <div class="col-md-12">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones1" value="Todo en Orden" name="observaciones[0]" <?php if(isset($observaciones)){if($observaciones_select[0] == "Todo en Orden"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones1" value="Todo en Orden" name="observaciones[0]" <?php if(isset($observaciones)){if($observaciones_select[0] == "Todo en Orden"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones1">Todo en Orden</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones2" value="Fuera de horario" name="observaciones[1]" <?php if(isset($observaciones)){if($observaciones_select[1] == "Fuera de horario"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones2" value="Fuera de horario" name="observaciones[1]" <?php if(isset($observaciones)){if($observaciones_select[1] == "Fuera de horario"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones2">Fuera de horario</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones3" value="Reincidencia" name="observaciones[2]" <?php if(isset($observaciones)){if($observaciones_select[2] == "Reincidencia"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones3" value="Reincidencia" name="observaciones[2]" <?php if(isset($observaciones)){if($observaciones_select[2] == "Reincidencia"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones3">Reincidencia</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones4" value="Fuera de zona" name="observaciones[3]" <?php if(isset($observaciones)){if($observaciones_select[3] == "Fuera de zona"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones4" value="Fuera de zona" name="observaciones[3]" <?php if(isset($observaciones)){if($observaciones_select[3] == "Fuera de zona"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones4">Fuera de zona</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones5" value="No cuenta con permiso" name="observaciones[4]" <?php if(isset($observaciones)){if($observaciones_select[4] == "No cuenta con permiso"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones5" value="No cuenta con permiso" name="observaciones[4]" <?php if(isset($observaciones)){if($observaciones_select[4] == "No cuenta con permiso"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones5">No cuenta con permiso</label>
                                         </div>
 
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones6" value="Estado de ebriedad" name="observaciones[5]" <?php if(isset($observaciones)){if($observaciones_select[5] == "Estado de ebriedad"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones6" value="Estado de ebriedad" name="observaciones[5]" <?php if(isset($observaciones)){if($observaciones_select[5] == "Estado de ebriedad"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones6">Estado de ebriedad</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones7" value="Invadir banqueta" name="observaciones[6]" <?php if(isset($observaciones)){if($observaciones_select[6] == "Invadir banqueta"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones7" value="Invadir banqueta" name="observaciones[6]" <?php if(isset($observaciones)){if($observaciones_select[6] == "Invadir banqueta"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones7">Invadir banqueta</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones8" value="Hacer caso omiso a las recomendaciones" name="observaciones[7]" <?php if(isset($observaciones)){if($observaciones_select[7] == "Hacer caso omiso a las recomendaciones"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones8" value="Hacer caso omiso a las recomendaciones" name="observaciones[7]" <?php if(isset($observaciones)){if($observaciones_select[7] == "Hacer caso omiso a las recomendaciones"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones8">Hacer caso omiso a las recomendaciones</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones9" value="Amenazas y/o insulto a la autoridad" name="observaciones[8]" <?php if(isset($observaciones)){if($observaciones_select[8] == "Amenazas y/o insulto a la autoridad"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones9" value="Amenazas y/o insulto a la autoridad" name="observaciones[8]" <?php if(isset($observaciones)){if($observaciones_select[8] == "Amenazas y/o insulto a la autoridad"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones9">Amenazas y/o insulto a la autoridad</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones10" value="Otro" name="observaciones[9]" <?php if(isset($observaciones)){if($observaciones_select[9] == "Otro"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones10" value="Otro" name="observaciones[9]" <?php if(isset($observaciones)){if($observaciones_select[9] == "Otro"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones10">Otro</label>
                                         </div>
                                       </div>
@@ -3097,8 +3147,8 @@
 
                                    </script>
 
-                                  <h4 class="card-title">Grafica Comparativa</h4>
-                                  <div class="row">
+                                  <h3 class="card-title">Grafica Comparativa</h3>
+                                  <!-- <div class="row">
                                     <div class="col-md-8">
                                       <div id="area-chart"></div>
                                     </div>
@@ -3107,9 +3157,9 @@
                                       <?php
                                       if ($genero == "Ambos") {
                                         ?>
-                                        <h5>Total: <?=$cont_ambos?></h5>
-                                        <h5>Masculinos: <?=$cont_masculino?></h5>
-                                        <h5>Femeninos: <?=$cont_femenino?></h5>
+                                        <h4>Total: <?=$cont_ambos?></h4>
+                                        <h4>Masculinos: <?=$cont_masculino?></h4>
+                                        <h4>Femeninos: <?=$cont_femenino?></h4>
 
                                         <?php
                                       }
@@ -3117,8 +3167,8 @@
                                        <?php
                                        if ($genero == "Masculino") {
                                          ?>
-                                         <h5>Total: <?=$cont_ambos?></h5>
-                                         <h5>Masculinos: <?=$cont_masculino?></h5>
+                                         <h4>Total: <?=$cont_ambos?></h4>
+                                         <h4>Masculinos: <?=$cont_masculino?></h4>
 
                                          <?php
                                        }
@@ -3126,12 +3176,44 @@
                                         <?php
                                         if ($genero == "Femenino") {
                                           ?>
-                                          <h5>Total: <?=$cont_ambos?></h5>
-                                          <h5>Femeninos: <?=$cont_femenino?></h5>
+                                          <h4>Total: <?=$cont_ambos?></h4>
+                                          <h4>Femeninos: <?=$cont_femenino?></h4>
 
                                           <?php
                                         }
                                          ?>
+                                    </div>
+                                  </div> -->
+
+                                  <script type="text/javascript">
+                                    var ambulantesMasculino = <?php echo $cont_masculino;?>;
+                                    var ambulantesFemenino = <?php echo $cont_femenino;?>;
+                                  </script>
+
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div id="basic-pie" style="height:400px;"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div id="basic-pie2" style="height:400px;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div id="stacked-bar" style="height:400px;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div id="stacked-bar2" style="height:400px;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div id="stacked-bar3" style="height:200px;"></div>
                                     </div>
                                   </div>
 
@@ -3147,7 +3229,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Giro</h4>
+                                          <h3>Giro</h3>
                                           <?php
                                           foreach ($giros_select as $key => $giro) {
                                             if ($giro != "null") {
@@ -3155,7 +3237,13 @@
                                               echo "<br>";
                                             }
                                           }
+
                                            ?>
+
+                                           <script type="text/javascript">
+                                             var girosSeleccionados=<?php echo json_encode($giros_select);?>;
+                                             var girosCantidad=<?php echo json_encode($cont_giros);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
@@ -3166,7 +3254,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Tags</h4>
+                                          <h3>Tags</h3>
                                           <?php
                                           foreach ($tags_select as $key => $tag) {
                                             if ($tag != "null") {
@@ -3185,7 +3273,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Zonas</h4>
+                                          <h3>Zonas</h3>
                                           <?php
                                           foreach ($zonas_select as $key => $zona) {
                                             if ($zona != "null") {
@@ -3194,6 +3282,11 @@
                                             }
                                           }
                                            ?>
+                                           <script type="text/javascript">
+                                             var zonasSeleccionados=<?php echo json_encode($zonas_select);?>;
+                                             var zonasCantidad=<?php echo json_encode($cont_zonas);?>;
+                                           </script>
+
                                         </div>
                                       <?php
                                     }
@@ -3204,7 +3297,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Estructuras</h4>
+                                          <h3>Estructuras</h3>
                                           <?php
                                           foreach ($estructuras_select as $key => $estructura) {
                                             if ($estructura != "null") {
@@ -3213,6 +3306,11 @@
                                             }
                                           }
                                            ?>
+
+                                           <script type="text/javascript">
+                                             var estructurasSeleccionados=<?php echo json_encode($estructuras_select);?>;
+                                             var estructurasCantidad=<?php echo json_encode($cont_estructuras);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
@@ -3223,7 +3321,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Estados</h4>
+                                          <h3>Estados</h3>
                                           <?php
                                           foreach ($estados as $key => $estado) {
                                             if ($estado != "null") {
@@ -3232,16 +3330,20 @@
                                             }
                                           }
                                            ?>
+                                           <script type="text/javascript">
+                                             var estadoSeleccionados=<?php echo json_encode($estados);?>;
+                                             var estadoCantidad=<?php echo json_encode($cont_estados);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
-                                    if (isset($observaciones)) {
+                                    if (isset($estados)) {
                                     ?>
                                     <br>
                                     <br>
                                       <div class="col-md-4 text-left">
                                         <br>
-                                        <h4>Observaciones</h4>
+                                        <h3>Observaciones</h3>
                                         <?php
                                         foreach ($observaciones as $key => $estado) {
                                           if ($estado != "null") {
@@ -3267,6 +3369,96 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body analytics-info">
+                                <h3 class="card-title">Fijos</h3>
+                                <ul class="list-inline two-part">
+                                    <li>
+                                        <div id="sparklinedash"></div>
+                                    </li>
+                                    <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $total_activos_fijos?></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body analytics-info">
+                                <h3 class="card-title">Semifijos</h3>
+                                <ul class="list-inline two-part">
+                                    <li>
+                                        <div id="sparklinedash2"></div>
+                                    </li>
+                                    <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= $total_activos_semifijos?></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body analytics-info">
+                                <h3 class="card-title">Ambulantes</h3>
+                                <ul class="list-inline two-part">
+                                    <li>
+                                        <div id="sparklinedash3"></div>
+                                    </li>
+                                    <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= $total_activos_ambulantes?></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card" style="height:100%;">
+                            <div class="card-body">
+                                <h3 class="card-title">Ubicaciones de comerciantes</h3>
+                                <div id="map" class="gmaps" style="display:none;"></div>
+                                <div id="map_2" class="gmaps"></div>
+                                <br>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="row">
+                                      <div class="col-md-2">
+                                        <h3>Zona 1: <span class="font-weight-normal"><?= $zona1 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 2: <span class="font-weight-normal"><?= $zona2 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 3: <span class="font-weight-normal"><?= $zona3 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 4: <span class="font-weight-normal"><?= $zona4 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 5: <span class="font-weight-normal"><?= $zona5 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 6: <span class="font-weight-normal"><?= $zona6 ?> Comerciantes</span></h3>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <br>
+
+
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -3305,7 +3497,7 @@
                 $dia7 = date("Y-m-d",mktime(0, 0, 0, date('m'),date('d')-6,date('Y')));
 
 
-                echo $dia1;
+                //echo $dia1;
                 $dias_semana = array($dia1,$dia2,$dia3,$dia4,$dia5,$dia6,$dia7);
 
                 $dias_activos_fijos = array(0, 0, 0, 0, 0, 0, 0);
@@ -3453,101 +3645,11 @@
 
                 </script>
 
-
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <div class="card-body analytics-info">
-                                <h4 class="card-title">Fijos</h4>
-                                <ul class="list-inline two-part">
-                                    <li>
-                                        <div id="sparklinedash"></div>
-                                    </li>
-                                    <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $total_activos_fijos?></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card">
-                            <div class="card-body analytics-info">
-                                <h4 class="card-title">Semifijos</h4>
-                                <ul class="list-inline two-part">
-                                    <li>
-                                        <div id="sparklinedash2"></div>
-                                    </li>
-                                    <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= $total_activos_semifijos?></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="card">
-                            <div class="card-body analytics-info">
-                                <h4 class="card-title">Ambulantes</h4>
-                                <ul class="list-inline two-part">
-                                    <li>
-                                        <div id="sparklinedash3"></div>
-                                    </li>
-                                    <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= $total_activos_ambulantes?></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card" style="height:100%;">
-                            <div class="card-body">
-                                <h4 class="card-title">Ubicaciones de comerciantes</h4>
-                                <div id="map" class="gmaps" style="display:none;"></div>
-                                <div id="map_2" class="gmaps"></div>
-                                <br>
-                                <div class="row">
-                                  <div class="col-md-12">
-                                    <div class="row">
-                                      <div class="col-md-2">
-                                        <h4>Zona 1: <span class="font-weight-normal"><?= $zona1 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 2: <span class="font-weight-normal"><?= $zona2 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 3: <span class="font-weight-normal"><?= $zona3 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 4: <span class="font-weight-normal"><?= $zona4 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 5: <span class="font-weight-normal"><?= $zona5 ?> Comerciantes</span></h4>
-                                      </div>
-                                      <div class="col-md-2">
-                                        <h4>Zona 6: <span class="font-weight-normal"><?= $zona6 ?> Comerciantes</span></h4>
-                                      </div>
-
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-                <br>
-
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Reporte</h4>
+                                <h3 class="card-title">REPORTE</h3>
                                 <?php
                                 //if (isset($giro)) {
                                   //foreach ($giro as $value) {
@@ -3562,7 +3664,7 @@
 
                                     </div>
                                     <div class="col-md-4 text-center">
-                                      <h4>Filtro</h4>
+                                      <h3>FILTRO</h3>
                                     </div>
                                     <div class="col-md-2">
                                       <div class="form-group">
@@ -3678,12 +3780,19 @@
 
 
                                    ?>
-
+                                   <div class="row">
+                                     <div class="col-md-12">
+                                       <div class="custom-control custom-checkbox">
+                                         <input type="checkbox" class="custom-control-input" id="seleccionarTodo" value="seleccionarTodo">
+                                         <label class="custom-control-label" for="seleccionarTodo">Seleccionar Todo</label>
+                                       </div>
+                                     </div>
+                                   </div>
                                   <br>
                                   <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Género</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Género</h4>
                                       </div>
                                       <div class="custom-control custom-radio">
                                           <input type="radio" id="genero" name="genero" class="custom-control-input" value="Ambos" <?php if(isset($genero)){if($genero == "Ambos"){echo "checked";}}else{echo "checked";} ?>>
@@ -3698,9 +3807,9 @@
                                           <label class="custom-control-label" for="genero2">Femenino</label>
                                       </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Giro</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Giro</h4>
                                       </div>
                                       <div class="row">
                                       <?php
@@ -3713,7 +3822,7 @@
                                           <div class="custom-control custom-checkbox">
                                             <?php
                                              ?>
-                                            <input type="checkbox" class="custom-control-input" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="<?= $giro->nombre_giro ?>1"><?= $giro->nombre_giro ?></label>
                                           </div>
                                         </div>
@@ -3723,7 +3832,7 @@
                                       ?>
                                       <div class="col-md-6">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="<?= $giro->nombre_giro ?>1"><?= $giro->nombre_giro ?></label>
                                         </div>
                                       </div>
@@ -3736,9 +3845,9 @@
 
                                     </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Tags</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Tags</h4>
                                       </div>
                                       <div class="row">
                                         <?php
@@ -3749,7 +3858,7 @@
                                           ?>
                                           <div class="col-md-6">
                                             <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
+                                              <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
                                               <label class="custom-control-label" for="<?= $tags->tag ?>1"><?= $tags->tag ?></label>
                                             </div>
                                           </div>
@@ -3759,7 +3868,7 @@
                                         ?>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="<?= $tags->tag ?>1"><?= $tags->tag ?></label>
                                           </div>
                                         </div>
@@ -3775,44 +3884,44 @@
                                   <br>
                                   <br>
                                   <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Zona</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Zona</h4>
                                       </div>
                                       <div class="row">
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona1" value="Zona 1" name="zona[0]" <?php if(isset($zonas)){if("Zona 1" == $zonas_select[0]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona1" value="Zona 1" name="zona[0]" <?php if(isset($zonas)){if("Zona 1" == $zonas_select[0]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona1">Zona 1</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona2" value="Zona 2" name="zona[1]" <?php if(isset($zonas)){if("Zona 2" == $zonas_select[1]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona2" value="Zona 2" name="zona[1]" <?php if(isset($zonas)){if("Zona 2" == $zonas_select[1]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona2">Zona 2</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona3" value="Zona 3" name="zona[2]" <?php if(isset($zonas)){if("Zona 3" == $zonas_select[2]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona3" value="Zona 3" name="zona[2]" <?php if(isset($zonas)){if("Zona 3" == $zonas_select[2]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona3">Zona 3</label>
                                           </div>
                                         </div>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona4" value="Zona 4" name="zona[3]" <?php if(isset($zonas)){if("Zona 4" == $zonas_select[3]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona4" value="Zona 4" name="zona[3]" <?php if(isset($zonas)){if("Zona 4" == $zonas_select[3]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona4">Zona 4</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona5" value="Zona 5" name="zona[4]" <?php if(isset($zonas)){if("Zona 5" == $zonas_select[4]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona5" value="Zona 5" name="zona[4]" <?php if(isset($zonas)){if("Zona 5" == $zonas_select[4]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona5">Zona 5</label>
                                           </div>
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="zona6" value="Zona 6" name="zona[5]" <?php if(isset($zonas)){if("Zona 6" == $zonas_select[5]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona6" value="Zona 6" name="zona[5]" <?php if(isset($zonas)){if("Zona 6" == $zonas_select[5]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="zona6">Zona 6</label>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Estructura</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Estructura</h4>
                                       </div>
                                       <div class="row">
                                         <?php
@@ -3823,7 +3932,7 @@
                                           ?>
                                           <div class="col-md-6">
                                             <div class="custom-control custom-checkbox">
-                                              <input type="checkbox" class="custom-control-input" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
+                                              <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
                                               <label class="custom-control-label" for="<?= $estructura->estructura ?>1"><?= $estructura->estructura ?></label>
                                             </div>
                                           </div>
@@ -3833,7 +3942,7 @@
                                         ?>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}} ?>>
                                             <label class="custom-control-label" for="<?= $estructura->estructura ?>1"><?= $estructura->estructura ?></label>
                                           </div>
                                         </div>
@@ -3845,71 +3954,71 @@
                                         ?>
                                       </div>
                                     </div>
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Estado</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Estado</h4>
                                       </div>
                                       <div class="col-md-12">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Activo1" value="Activo" name="estado[0]" <?php if(isset($estados)){if($estados_select[0] == "Activo"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Activo1" value="Activo" name="estado[0]" <?php if(isset($estados)){if($estados_select[0] == "Activo"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Activo1">Activo</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Inactivo1" value="Inactivo" name="estado[1]" <?php if(isset($estados)){if($estados_select[1] == "Inactivo"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Inactivo1" value="Inactivo" name="estado[1]" <?php if(isset($estados)){if($estados_select[1] == "Inactivo"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Inactivo1">Inactivo</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Vencido1" value="Vencido" name="estado[2]" <?php if(isset($estados)){if($estados_select[2] == "Vencido"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Vencido1" value="Vencido" name="estado[2]" <?php if(isset($estados)){if($estados_select[2] == "Vencido"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Vencido1">Vencido</label>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                   <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="text-center">
-                                        <h5>Observaciones</h5>
+                                    <div class="col-md-4" style="border-style: groove;">
+                                      <div class="">
+                                        <h4>Observaciones</h4>
                                       </div>
                                       <div class="col-md-12">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones1" value="Todo en Orden" name="observaciones[0]" <?php if(isset($observaciones)){if($observaciones_select[0] == "Todo en Orden"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones1" value="Todo en Orden" name="observaciones[0]" <?php if(isset($observaciones)){if($observaciones_select[0] == "Todo en Orden"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones1">Todo en Orden</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones2" value="Fuera de horario" name="observaciones[1]" <?php if(isset($observaciones)){if($observaciones_select[1] == "Fuera de horario"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones2" value="Fuera de horario" name="observaciones[1]" <?php if(isset($observaciones)){if($observaciones_select[1] == "Fuera de horario"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones2">Fuera de horario</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones3" value="Reincidencia" name="observaciones[2]" <?php if(isset($observaciones)){if($observaciones_select[2] == "Reincidencia"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones3" value="Reincidencia" name="observaciones[2]" <?php if(isset($observaciones)){if($observaciones_select[2] == "Reincidencia"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones3">Reincidencia</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones4" value="Fuera de zona" name="observaciones[3]" <?php if(isset($observaciones)){if($observaciones_select[3] == "Fuera de zona"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones4" value="Fuera de zona" name="observaciones[3]" <?php if(isset($observaciones)){if($observaciones_select[3] == "Fuera de zona"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones4">Fuera de zona</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones5" value="No cuenta con permiso" name="observaciones[4]" <?php if(isset($observaciones)){if($observaciones_select[4] == "No cuenta con permiso"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones5" value="No cuenta con permiso" name="observaciones[4]" <?php if(isset($observaciones)){if($observaciones_select[4] == "No cuenta con permiso"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones5">No cuenta con permiso</label>
                                         </div>
 
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones6" value="Estado de ebriedad" name="observaciones[5]" <?php if(isset($observaciones)){if($observaciones_select[5] == "Estado de ebriedad"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones6" value="Estado de ebriedad" name="observaciones[5]" <?php if(isset($observaciones)){if($observaciones_select[5] == "Estado de ebriedad"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones6">Estado de ebriedad</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones7" value="Invadir banqueta" name="observaciones[6]" <?php if(isset($observaciones)){if($observaciones_select[6] == "Invadir banqueta"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones7" value="Invadir banqueta" name="observaciones[6]" <?php if(isset($observaciones)){if($observaciones_select[6] == "Invadir banqueta"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones7">Invadir banqueta</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones8" value="Hacer caso omiso a las recomendaciones" name="observaciones[7]" <?php if(isset($observaciones)){if($observaciones_select[7] == "Hacer caso omiso a las recomendaciones"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones8" value="Hacer caso omiso a las recomendaciones" name="observaciones[7]" <?php if(isset($observaciones)){if($observaciones_select[7] == "Hacer caso omiso a las recomendaciones"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones8">Hacer caso omiso a las recomendaciones</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones9" value="Amenazas y/o insulto a la autoridad" name="observaciones[8]" <?php if(isset($observaciones)){if($observaciones_select[8] == "Amenazas y/o insulto a la autoridad"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones9" value="Amenazas y/o insulto a la autoridad" name="observaciones[8]" <?php if(isset($observaciones)){if($observaciones_select[8] == "Amenazas y/o insulto a la autoridad"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones9">Amenazas y/o insulto a la autoridad</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="Observaciones10" value="Otro" name="observaciones[9]" <?php if(isset($observaciones)){if($observaciones_select[9] == "Otro"){echo "checked";}} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones10" value="Otro" name="observaciones[9]" <?php if(isset($observaciones)){if($observaciones_select[9] == "Otro"){echo "checked";}} ?>>
                                           <label class="custom-control-label" for="Observaciones10">Otro</label>
                                         </div>
                                       </div>
@@ -4187,8 +4296,8 @@
 
                                    </script>
 
-                                  <h4 class="card-title">Grafica Comparativa</h4>
-                                  <div class="row">
+                                  <h3 class="card-title">Grafica Comparativa</h3>
+                                  <!-- <div class="row">
                                     <div class="col-md-8">
                                       <div id="area-chart"></div>
                                     </div>
@@ -4197,9 +4306,9 @@
                                       <?php
                                       if ($genero == "Ambos") {
                                         ?>
-                                        <h5>Total: <?=$cont_ambos?></h5>
-                                        <h5>Masculinos: <?=$cont_masculino?></h5>
-                                        <h5>Femeninos: <?=$cont_femenino?></h5>
+                                        <h4>Total: <?=$cont_ambos?></h4>
+                                        <h4>Masculinos: <?=$cont_masculino?></h4>
+                                        <h4>Femeninos: <?=$cont_femenino?></h4>
 
                                         <?php
                                       }
@@ -4207,8 +4316,8 @@
                                        <?php
                                        if ($genero == "Masculino") {
                                          ?>
-                                         <h5>Total: <?=$cont_ambos?></h5>
-                                         <h5>Masculinos: <?=$cont_masculino?></h5>
+                                         <h4>Total: <?=$cont_ambos?></h4>
+                                         <h4>Masculinos: <?=$cont_masculino?></h4>
 
                                          <?php
                                        }
@@ -4216,12 +4325,44 @@
                                         <?php
                                         if ($genero == "Femenino") {
                                           ?>
-                                          <h5>Total: <?=$cont_ambos?></h5>
-                                          <h5>Femeninos: <?=$cont_femenino?></h5>
+                                          <h4>Total: <?=$cont_ambos?></h4>
+                                          <h4>Femeninos: <?=$cont_femenino?></h4>
 
                                           <?php
                                         }
                                          ?>
+                                    </div>
+                                  </div> -->
+
+                                  <script type="text/javascript">
+                                    var ambulantesMasculino = <?php echo $cont_masculino;?>;
+                                    var ambulantesFemenino = <?php echo $cont_femenino;?>;
+                                  </script>
+
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div id="basic-pie" style="height:400px;"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div id="basic-pie2" style="height:400px;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div id="stacked-bar" style="height:400px;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div id="stacked-bar2" style="height:400px;"></div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div id="stacked-bar3" style="height:200px;"></div>
                                     </div>
                                   </div>
 
@@ -4237,7 +4378,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Giro</h4>
+                                          <h3>Giro</h3>
                                           <?php
                                           foreach ($giros_select as $key => $giro) {
                                             if ($giro != "null") {
@@ -4245,7 +4386,13 @@
                                               echo "<br>";
                                             }
                                           }
+
                                            ?>
+
+                                           <script type="text/javascript">
+                                             var girosSeleccionados=<?php echo json_encode($giros_select);?>;
+                                             var girosCantidad=<?php echo json_encode($cont_giros);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
@@ -4256,7 +4403,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Tags</h4>
+                                          <h3>Tags</h3>
                                           <?php
                                           foreach ($tags_select as $key => $tag) {
                                             if ($tag != "null") {
@@ -4275,7 +4422,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Zonas</h4>
+                                          <h3>Zonas</h3>
                                           <?php
                                           foreach ($zonas_select as $key => $zona) {
                                             if ($zona != "null") {
@@ -4284,6 +4431,11 @@
                                             }
                                           }
                                            ?>
+                                           <script type="text/javascript">
+                                             var zonasSeleccionados=<?php echo json_encode($zonas_select);?>;
+                                             var zonasCantidad=<?php echo json_encode($cont_zonas);?>;
+                                           </script>
+
                                         </div>
                                       <?php
                                     }
@@ -4294,7 +4446,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Estructuras</h4>
+                                          <h3>Estructuras</h3>
                                           <?php
                                           foreach ($estructuras_select as $key => $estructura) {
                                             if ($estructura != "null") {
@@ -4303,6 +4455,11 @@
                                             }
                                           }
                                            ?>
+
+                                           <script type="text/javascript">
+                                             var estructurasSeleccionados=<?php echo json_encode($estructuras_select);?>;
+                                             var estructurasCantidad=<?php echo json_encode($cont_estructuras);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
@@ -4313,7 +4470,7 @@
                                       <br>
                                         <div class="col-md-4 text-left">
                                           <br>
-                                          <h4>Estados</h4>
+                                          <h3>Estados</h3>
                                           <?php
                                           foreach ($estados as $key => $estado) {
                                             if ($estado != "null") {
@@ -4322,6 +4479,10 @@
                                             }
                                           }
                                            ?>
+                                           <script type="text/javascript">
+                                             var estadoSeleccionados=<?php echo json_encode($estados);?>;
+                                             var estadoCantidad=<?php echo json_encode($cont_estados);?>;
+                                           </script>
                                         </div>
                                       <?php
                                     }
@@ -4331,7 +4492,7 @@
                                     <br>
                                       <div class="col-md-4 text-left">
                                         <br>
-                                        <h4>Observaciones</h4>
+                                        <h3>Observaciones</h3>
                                         <?php
                                         foreach ($observaciones as $key => $estado) {
                                           if ($estado != "null") {
@@ -4357,6 +4518,96 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body analytics-info">
+                                <h3 class="card-title">Fijos</h3>
+                                <ul class="list-inline two-part">
+                                    <li>
+                                        <div id="sparklinedash"></div>
+                                    </li>
+                                    <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $total_activos_fijos?></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body analytics-info">
+                                <h3 class="card-title">Semifijos</h3>
+                                <ul class="list-inline two-part">
+                                    <li>
+                                        <div id="sparklinedash2"></div>
+                                    </li>
+                                    <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= $total_activos_semifijos?></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-body analytics-info">
+                                <h3 class="card-title">Ambulantes</h3>
+                                <ul class="list-inline two-part">
+                                    <li>
+                                        <div id="sparklinedash3"></div>
+                                    </li>
+                                    <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= $total_activos_ambulantes?></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card" style="height:100%;">
+                            <div class="card-body">
+                                <h3 class="card-title">Ubicaciones de comerciantes</h3>
+                                <div id="map" class="gmaps" style="display:none;"></div>
+                                <div id="map_2" class="gmaps"></div>
+                                <br>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="row">
+                                      <div class="col-md-2">
+                                        <h3>Zona 1: <span class="font-weight-normal"><?= $zona1 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 2: <span class="font-weight-normal"><?= $zona2 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 3: <span class="font-weight-normal"><?= $zona3 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 4: <span class="font-weight-normal"><?= $zona4 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 5: <span class="font-weight-normal"><?= $zona5 ?> Comerciantes</span></h3>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <h3>Zona 6: <span class="font-weight-normal"><?= $zona6 ?> Comerciantes</span></h3>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <br>
+
+
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -4537,101 +4788,11 @@
 
               </script>
 
-
-
-              <div class="row">
-                  <div class="col-lg-4 col-md-6">
-                      <div class="card">
-                          <div class="card-body analytics-info">
-                              <h4 class="card-title">Fijos</h4>
-                              <ul class="list-inline two-part">
-                                  <li>
-                                      <div id="sparklinedash"></div>
-                                  </li>
-                                  <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $total_activos_fijos?></span></li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-
-
-                  <div class="col-lg-4 col-md-6">
-                      <div class="card">
-                          <div class="card-body analytics-info">
-                              <h4 class="card-title">Semifijos</h4>
-                              <ul class="list-inline two-part">
-                                  <li>
-                                      <div id="sparklinedash2"></div>
-                                  </li>
-                                  <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= $total_activos_semifijos?></span></li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-12">
-                      <div class="card">
-                          <div class="card-body analytics-info">
-                              <h4 class="card-title">Ambulantes</h4>
-                              <ul class="list-inline two-part">
-                                  <li>
-                                      <div id="sparklinedash3"></div>
-                                  </li>
-                                  <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= $total_activos_ambulantes?></span></li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="row">
-                  <div class="col-12">
-                      <div class="card" style="height:100%;">
-                          <div class="card-body">
-                              <h4 class="card-title">Ubicaciones de comerciantes</h4>
-                              <div id="map" class="gmaps" style="display:none;"></div>
-                              <div id="map_2" class="gmaps"></div>
-                              <br>
-                              <div class="row">
-                                <div class="col-md-12">
-                                  <div class="row">
-                                    <div class="col-md-2">
-                                      <h4>Zona 1: <span class="font-weight-normal"><?= $zona1 ?> Comerciantes</span></h4>
-                                    </div>
-                                    <div class="col-md-2">
-                                      <h4>Zona 2: <span class="font-weight-normal"><?= $zona2 ?> Comerciantes</span></h4>
-                                    </div>
-                                    <div class="col-md-2">
-                                      <h4>Zona 3: <span class="font-weight-normal"><?= $zona3 ?> Comerciantes</span></h4>
-                                    </div>
-                                    <div class="col-md-2">
-                                      <h4>Zona 4: <span class="font-weight-normal"><?= $zona4 ?> Comerciantes</span></h4>
-                                    </div>
-                                    <div class="col-md-2">
-                                      <h4>Zona 5: <span class="font-weight-normal"><?= $zona5 ?> Comerciantes</span></h4>
-                                    </div>
-                                    <div class="col-md-2">
-                                      <h4>Zona 6: <span class="font-weight-normal"><?= $zona6 ?> Comerciantes</span></h4>
-                                    </div>
-
-                                  </div>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-
-
-
-
-              <br>
-
               <div class="row">
                   <div class="col-12">
                       <div class="card">
                           <div class="card-body">
-                              <h4 class="card-title">Reporte</h4>
+                              <h3 class="card-title">REPORTE</h3>
                               <?php
                               //if (isset($giro)) {
                                 //foreach ($giro as $value) {
@@ -4646,7 +4807,7 @@
 
                                   </div>
                                   <div class="col-md-4 text-center">
-                                    <h4>Filtro</h4>
+                                    <h3>FILTRO</h3>
                                   </div>
                                   <div class="col-md-2">
                                     <div class="form-group">
@@ -4775,11 +4936,19 @@
 
                                  ?>
 
+                                 <div class="row">
+                                   <div class="col-md-12">
+                                     <div class="custom-control custom-checkbox">
+                                       <input type="checkbox" class="custom-control-input" id="seleccionarTodo" value="seleccionarTodo">
+                                       <label class="custom-control-label" for="seleccionarTodo">Seleccionar Todo</label>
+                                     </div>
+                                   </div>
+                                 </div>
                                 <br>
                                 <div class="row">
-                                  <div class="col-md-4">
-                                    <div class="text-center">
-                                      <h5>Género</h5>
+                                  <div class="col-md-4" style="border-style: groove;">
+                                    <div class="">
+                                      <h4>Género</h4>
                                     </div>
                                     <div class="custom-control custom-radio">
                                         <input type="radio" id="genero" name="genero" class="custom-control-input" value="Ambos" <?php if(isset($genero)){if($genero == "Ambos"){echo "checked";}}else{echo "checked";} ?>>
@@ -4794,9 +4963,9 @@
                                         <label class="custom-control-label" for="genero2">Femenino</label>
                                     </div>
                                   </div>
-                                  <div class="col-md-4">
-                                    <div class="text-center">
-                                      <h5>Giro</h5>
+                                  <div class="col-md-4" style="border-style: groove;">
+                                    <div class="">
+                                      <h4>Giro</h4>
                                     </div>
                                     <div class="row">
                                     <?php
@@ -4809,7 +4978,7 @@
                                         <div class="custom-control custom-checkbox">
                                           <?php
                                            ?>
-                                          <input type="checkbox" class="custom-control-input" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}}else{echo "checked";}?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}}else{echo "checked";}?>>
                                           <label class="custom-control-label" for="<?= $giro->nombre_giro ?>1"><?= $giro->nombre_giro ?></label>
                                         </div>
                                       </div>
@@ -4819,7 +4988,7 @@
                                     ?>
                                     <div class="col-md-6">
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $giro->nombre_giro ?>1" value="<?= $giro->nombre_giro ?>" name="giro[<?=$key?>]" <?php if(isset($giros)){if($giro->nombre_giro == $giros_select[$key]){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="<?= $giro->nombre_giro ?>1"><?= $giro->nombre_giro ?></label>
                                       </div>
                                     </div>
@@ -4832,9 +5001,9 @@
 
                                   </div>
                                   </div>
-                                  <div class="col-md-4">
-                                    <div class="text-center">
-                                      <h5>Tags</h5>
+                                  <div class="col-md-4" style="border-style: groove;">
+                                    <div class="">
+                                      <h4>Tags</h4>
                                     </div>
                                     <div class="row">
                                       <?php
@@ -4845,7 +5014,7 @@
                                         ?>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}}else{echo "checked";} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}}else{echo "checked";} ?>>
                                             <label class="custom-control-label" for="<?= $tags->tag ?>1"><?= $tags->tag ?></label>
                                           </div>
                                         </div>
@@ -4855,7 +5024,7 @@
                                       ?>
                                       <div class="col-md-6">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}}else{echo "checked";} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $tags->tag ?>1" value="<?= $tags->tag ?>" name="tags[<?=$key?>]" <?php if(isset($tags_s)){if($tags->tag == $tags_select[$key]){echo "checked";}}else{echo "checked";} ?>>
                                           <label class="custom-control-label" for="<?= $tags->tag ?>1"><?= $tags->tag ?></label>
                                         </div>
                                       </div>
@@ -4871,44 +5040,44 @@
                                 <br>
                                 <br>
                                 <div class="row">
-                                  <div class="col-md-4">
-                                    <div class="text-center">
-                                      <h5>Zona</h5>
+                                  <div class="col-md-4" style="border-style: groove;">
+                                    <div class="">
+                                      <h4>Zona</h4>
                                     </div>
                                     <div class="row">
                                       <div class="col-md-6">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="zona1" value="Zona 1" name="zona[0]" <?php if(isset($zonas)){if("Zona 1" == $zonas_select[0]){echo "checked";}}else{echo "checked";} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona1" value="Zona 1" name="zona[0]" <?php if(isset($zonas)){if("Zona 1" == $zonas_select[0]){echo "checked";}}else{echo "checked";} ?>>
                                           <label class="custom-control-label" for="zona1">Zona 1</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="zona2" value="Zona 2" name="zona[1]" <?php if(isset($zonas)){if("Zona 2" == $zonas_select[1]){echo "checked";}}else{echo "checked";} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona2" value="Zona 2" name="zona[1]" <?php if(isset($zonas)){if("Zona 2" == $zonas_select[1]){echo "checked";}}else{echo "checked";} ?>>
                                           <label class="custom-control-label" for="zona2">Zona 2</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="zona3" value="Zona 3" name="zona[2]" <?php if(isset($zonas)){if("Zona 3" == $zonas_select[2]){echo "checked";}}else{echo "checked";} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona3" value="Zona 3" name="zona[2]" <?php if(isset($zonas)){if("Zona 3" == $zonas_select[2]){echo "checked";}}else{echo "checked";} ?>>
                                           <label class="custom-control-label" for="zona3">Zona 3</label>
                                         </div>
                                       </div>
                                       <div class="col-md-6">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="zona4" value="Zona 4" name="zona[3]" <?php if(isset($zonas)){if("Zona 4" == $zonas_select[3]){echo "checked";}}else{echo "checked";} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona4" value="Zona 4" name="zona[3]" <?php if(isset($zonas)){if("Zona 4" == $zonas_select[3]){echo "checked";}}else{echo "checked";} ?>>
                                           <label class="custom-control-label" for="zona4">Zona 4</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="zona5" value="Zona 5" name="zona[4]" <?php if(isset($zonas)){if("Zona 5" == $zonas_select[4]){echo "checked";}}else{echo "checked";} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona5" value="Zona 5" name="zona[4]" <?php if(isset($zonas)){if("Zona 5" == $zonas_select[4]){echo "checked";}}else{echo "checked";} ?>>
                                           <label class="custom-control-label" for="zona5">Zona 5</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="zona6" value="Zona 6" name="zona[5]" <?php if(isset($zonas)){if("Zona 6" == $zonas_select[5]){echo "checked";}}else{echo "checked";} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="zona6" value="Zona 6" name="zona[5]" <?php if(isset($zonas)){if("Zona 6" == $zonas_select[5]){echo "checked";}}else{echo "checked";} ?>>
                                           <label class="custom-control-label" for="zona6">Zona 6</label>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="col-md-4">
-                                    <div class="text-center">
-                                      <h5>Estructura</h5>
+                                  <div class="col-md-4" style="border-style: groove;">
+                                    <div class="">
+                                      <h4>Estructura</h4>
                                     </div>
                                     <div class="row">
                                       <?php
@@ -4919,7 +5088,7 @@
                                         ?>
                                         <div class="col-md-6">
                                           <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}}else{echo "checked";} ?>>
+                                            <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}}else{echo "checked";} ?>>
                                             <label class="custom-control-label" for="<?= $estructura->estructura ?>1"><?= $estructura->estructura ?></label>
                                           </div>
                                         </div>
@@ -4929,7 +5098,7 @@
                                       ?>
                                       <div class="col-md-6">
                                         <div class="custom-control custom-checkbox">
-                                          <input type="checkbox" class="custom-control-input" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}}else{echo "checked";} ?>>
+                                          <input type="checkbox" class="custom-control-input seleccionarTodo" id="<?= $estructura->estructura ?>1" value="<?= $estructura->estructura ?>" name="estructura[<?=$key?>]" <?php if(isset($estructuras)){if($estructura->estructura == $estructuras_select[$key]){echo "checked";}}else{echo "checked";} ?>>
                                           <label class="custom-control-label" for="<?= $estructura->estructura ?>1"><?= $estructura->estructura ?></label>
                                         </div>
                                       </div>
@@ -4941,71 +5110,73 @@
                                       ?>
                                     </div>
                                   </div>
-                                  <div class="col-md-4">
-                                    <div class="text-center">
-                                      <h5>Estado</h5>
+                                  <div class="col-md-4" style="border-style: groove;">
+                                    <div class="">
+                                      <h4>Estado</h4>
                                     </div>
                                     <div class="col-md-12">
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Activo1" value="Activo" name="estado[0]" <?php if(isset($estados)){if($estados_select[0] == "Activo"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Activo1" value="Activo" name="estado[0]" <?php if(isset($estados)){if($estados_select[0] == "Activo"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Activo1">Activo</label>
                                       </div>
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Inactivo1" value="Inactivo" name="estado[1]" <?php if(isset($estados)){if($estados_select[1] == "Inactivo"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Inactivo1" value="Inactivo" name="estado[1]" <?php if(isset($estados)){if($estados_select[1] == "Inactivo"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Inactivo1">Inactivo</label>
                                       </div>
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Vencido1" value="Vencido" name="estado[2]" <?php if(isset($estados)){if($estados_select[2] == "Vencido"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Vencido1" value="Vencido" name="estado[2]" <?php if(isset($estados)){if($estados_select[2] == "Vencido"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Vencido1">Vencido</label>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
+                                <br>
+                                <br>
                                 <div class="row">
-                                  <div class="col-md-4">
-                                    <div class="text-center">
-                                      <h5>Observaciones</h5>
+                                  <div class="col-md-4" style="border-style: groove;">
+                                    <div class="">
+                                      <h4>Observaciones</h4>
                                     </div>
                                     <div class="col-md-12">
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Observaciones1" value="Todo en Orden" name="observaciones[0]" <?php if(isset($observaciones)){if($observaciones_select[0] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones1" value="Todo en Orden" name="observaciones[0]" <?php if(isset($observaciones)){if($observaciones_select[0] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Observaciones1">Todo en Orden</label>
                                       </div>
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Observaciones2" value="Fuera de horario" name="observaciones[1]" <?php if(isset($observaciones)){if($observaciones_select[1] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones2" value="Fuera de horario" name="observaciones[1]" <?php if(isset($observaciones)){if($observaciones_select[1] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Observaciones2">Fuera de horario</label>
                                       </div>
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Observaciones3" value="Reincidencia" name="observaciones[2]" <?php if(isset($observaciones)){if($observaciones_select[2] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones3" value="Reincidencia" name="observaciones[2]" <?php if(isset($observaciones)){if($observaciones_select[2] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Observaciones3">Reincidencia</label>
                                       </div>
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Observaciones4" value="Fuera de zona" name="observaciones[3]" <?php if(isset($observaciones)){if($observaciones_select[3] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones4" value="Fuera de zona" name="observaciones[3]" <?php if(isset($observaciones)){if($observaciones_select[3] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Observaciones4">Fuera de zona</label>
                                       </div>
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Observaciones5" value="No cuenta con permiso" name="observaciones[4]" <?php if(isset($observaciones)){if($observaciones_select[4] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones5" value="No cuenta con permiso" name="observaciones[4]" <?php if(isset($observaciones)){if($observaciones_select[4] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Observaciones5">No cuenta con permiso</label>
                                       </div>
 
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Observaciones6" value="Estado de ebriedad" name="observaciones[5]" <?php if(isset($observaciones)){if($observaciones_select[5] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones6" value="Estado de ebriedad" name="observaciones[5]" <?php if(isset($observaciones)){if($observaciones_select[5] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Observaciones6">Estado de ebriedad</label>
                                       </div>
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Observaciones7" value="Invadir banqueta" name="observaciones[6]" <?php if(isset($observaciones)){if($observaciones_select[6] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones7" value="Invadir banqueta" name="observaciones[6]" <?php if(isset($observaciones)){if($observaciones_select[6] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Observaciones7">Invadir banqueta</label>
                                       </div>
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Observaciones8" value="Hacer caso omiso a las recomendaciones" name="observaciones[7]" <?php if(isset($observaciones)){if($observaciones_select[7] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones8" value="Hacer caso omiso a las recomendaciones" name="observaciones[7]" <?php if(isset($observaciones)){if($observaciones_select[7] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Observaciones8">Hacer caso omiso a las recomendaciones</label>
                                       </div>
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Observaciones9" value="Amenazas y/o insulto a la autoridad" name="observaciones[8]" <?php if(isset($observaciones)){if($observaciones_select[8] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones9" value="Amenazas y/o insulto a la autoridad" name="observaciones[8]" <?php if(isset($observaciones)){if($observaciones_select[8] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Observaciones9">Amenazas y/o insulto a la autoridad</label>
                                       </div>
                                       <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="Observaciones10" value="Otro" name="observaciones[9]" <?php if(isset($observaciones)){if($observaciones_select[9] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
+                                        <input type="checkbox" class="custom-control-input seleccionarTodo" id="Observaciones10" value="Otro" name="observaciones[9]" <?php if(isset($observaciones)){if($observaciones_select[9] == "Todo en Orden"){echo "checked";}}else{echo "checked";} ?>>
                                         <label class="custom-control-label" for="Observaciones10">Otro</label>
                                       </div>
                                     </div>
@@ -5240,7 +5411,7 @@
 
                                  </script>
 
-                                <h4 class="card-title">Grafica Comparativa</h4>
+                                <h3 class="card-title">Grafica Comparativa</h3>
                                 <div class="row">
                                   <div class="col-md-8">
                                     <div id="area-chart"></div>
@@ -5250,9 +5421,9 @@
                                     <?php
                                     if ($genero == "Ambos") {
                                       ?>
-                                      <h5>Total: <?=$cont_ambos?></h5>
-                                      <h5>Masculinos: <?=$cont_masculino?></h5>
-                                      <h5>Femeninos: <?=$cont_femenino?></h5>
+                                      <h4>Total: <?=$cont_ambos?></h4>
+                                      <h4>Masculinos: <?=$cont_masculino?></h4>
+                                      <h4>Femeninos: <?=$cont_femenino?></h4>
 
                                       <?php
                                     }
@@ -5260,8 +5431,8 @@
                                      <?php
                                      if ($genero == "Masculino") {
                                        ?>
-                                       <h5>Total: <?=$cont_ambos?></h5>
-                                       <h5>Masculinos: <?=$cont_masculino?></h5>
+                                       <h4>Total: <?=$cont_ambos?></h4>
+                                       <h4>Masculinos: <?=$cont_masculino?></h4>
 
                                        <?php
                                      }
@@ -5269,8 +5440,8 @@
                                       <?php
                                       if ($genero == "Femenino") {
                                         ?>
-                                        <h5>Total: <?=$cont_ambos?></h5>
-                                        <h5>Femeninos: <?=$cont_femenino?></h5>
+                                        <h4>Total: <?=$cont_ambos?></h4>
+                                        <h4>Femeninos: <?=$cont_femenino?></h4>
 
                                         <?php
                                       }
@@ -5290,7 +5461,7 @@
                                     <br>
                                       <div class="col-md-4 text-left">
                                         <br>
-                                        <h4>Giro</h4>
+                                        <h3>Giro</h3>
                                         <?php
                                         foreach ($giros_select as $key => $giro) {
                                           if ($giro != "null") {
@@ -5309,7 +5480,7 @@
                                     <br>
                                       <div class="col-md-4 text-left">
                                         <br>
-                                        <h4>Tags</h4>
+                                        <h3>Tags</h3>
                                         <?php
                                         foreach ($tags_select as $key => $tag) {
                                           if ($tag != "null") {
@@ -5328,7 +5499,7 @@
                                     <br>
                                       <div class="col-md-4 text-left">
                                         <br>
-                                        <h4>Zonas</h4>
+                                        <h3>Zonas</h3>
                                         <?php
                                         foreach ($zonas_select as $key => $zona) {
                                           if ($zona != "null") {
@@ -5347,7 +5518,7 @@
                                     <br>
                                       <div class="col-md-4 text-left">
                                         <br>
-                                        <h4>Estructuras</h4>
+                                        <h3>Estructuras</h3>
                                         <?php
                                         foreach ($estructuras_select as $key => $estructura) {
                                           if ($estructura != "null") {
@@ -5366,7 +5537,7 @@
                                     <br>
                                       <div class="col-md-4 text-left">
                                         <br>
-                                        <h4>Estados</h4>
+                                        <h3>Estados</h3>
                                         <?php
                                         foreach ($estados as $key => $estado) {
                                           if ($estado != "null") {
@@ -5392,6 +5563,96 @@
                       </div>
                   </div>
               </div>
+
+              <div class="row">
+                  <div class="col-lg-4 col-md-6">
+                      <div class="card">
+                          <div class="card-body analytics-info">
+                              <h3 class="card-title">Fijos</h3>
+                              <ul class="list-inline two-part">
+                                  <li>
+                                      <div id="sparklinedash"></div>
+                                  </li>
+                                  <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?= $total_activos_fijos?></span></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="col-lg-4 col-md-6">
+                      <div class="card">
+                          <div class="card-body analytics-info">
+                              <h3 class="card-title">Semifijos</h3>
+                              <ul class="list-inline two-part">
+                                  <li>
+                                      <div id="sparklinedash2"></div>
+                                  </li>
+                                  <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple"><?= $total_activos_semifijos?></span></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12">
+                      <div class="card">
+                          <div class="card-body analytics-info">
+                              <h3 class="card-title">Ambulantes</h3>
+                              <ul class="list-inline two-part">
+                                  <li>
+                                      <div id="sparklinedash3"></div>
+                                  </li>
+                                  <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info"><?= $total_activos_ambulantes?></span></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-12">
+                      <div class="card" style="height:100%;">
+                          <div class="card-body">
+                              <h3 class="card-title">Ubicaciones de comerciantes</h3>
+                              <div id="map" class="gmaps" style="display:none;"></div>
+                              <div id="map_2" class="gmaps"></div>
+                              <br>
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="row">
+                                    <div class="col-md-2">
+                                      <h3>Zona 1: <span class="font-weight-normal"><?= $zona1 ?> Comerciantes</span></h3>
+                                    </div>
+                                    <div class="col-md-2">
+                                      <h3>Zona 2: <span class="font-weight-normal"><?= $zona2 ?> Comerciantes</span></h3>
+                                    </div>
+                                    <div class="col-md-2">
+                                      <h3>Zona 3: <span class="font-weight-normal"><?= $zona3 ?> Comerciantes</span></h3>
+                                    </div>
+                                    <div class="col-md-2">
+                                      <h3>Zona 4: <span class="font-weight-normal"><?= $zona4 ?> Comerciantes</span></h3>
+                                    </div>
+                                    <div class="col-md-2">
+                                      <h3>Zona 5: <span class="font-weight-normal"><?= $zona5 ?> Comerciantes</span></h3>
+                                    </div>
+                                    <div class="col-md-2">
+                                      <h3>Zona 6: <span class="font-weight-normal"><?= $zona6 ?> Comerciantes</span></h3>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
+
+              <br>
+
+
               <!-- ============================================================== -->
               <!-- End PAge Content -->
               <!-- ============================================================== -->

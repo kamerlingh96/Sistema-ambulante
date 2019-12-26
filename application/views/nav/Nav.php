@@ -166,17 +166,18 @@
                         <!-- User Profile-->
                         <li class="p-15 m-t-10" style="padding:0 15px !important; margin-top: 0 !important;"> <a class="btn btn-block create-btn text-white no-block d-flex align-items-center" href="<?= base_url()?>Comerciantes_list_controller/list" aria-expanded="false"><i class="mdi mdi-account-multiple"></i> <span class="hide-menu m-l-5">Lista de Comerciantes</span></a></li>
                         <!--<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url()?>Carpeta" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Pruebas</span></a></li>-->
-                        <?php
-                        if ($nivel != 3) {
-                          ?>
-                        <li class="p-15 m-t-10" style="padding:0 15px !important; margin-top: 15px !important;"> <a class="btn btn-block create-btn text-white no-block d-flex align-items-center" href="#" aria-expanded="false"><i class="fa fa-print"></i> <span class="hide-menu m-l-5"> Imprimir Tarjetón</span></a></li>
-                        <?php
-                      }
-                       ?>
+
 
                         <li class="p-15 m-t-10" style="padding:0 15px !important; margin-top: 15px !important;"> <a class="btn btn-block create-btn text-white no-block d-flex align-items-center" href="<?= base_url()?>Reportes_controller/reportes" aria-expanded="false"><i class="mdi mdi-tooltip-edit"></i> <span class="hide-menu m-l-5"> Reportes</span></a></li>
 
                         <li class="p-15 m-t-10" style="padding:0 15px !important; margin-top: 15px !important;"> <a class="btn btn-block create-btn text-white no-block d-flex align-items-center" href="#" aria-expanded="false"><i class="mdi mdi-help-circle"></i> <span class="hide-menu m-l-5"> Ayuda</span></a></li>
+                        <?php
+                        if ($nivel == 1) {
+                          ?>
+                        <li class="p-15 m-t-10" style="padding:0 15px !important; margin-top: 15px !important;"> <a class="btn btn-block create-btn text-white no-block d-flex align-items-center" href="<?= base_url()?>Configuracion" aria-expanded="false"><i class="mdi mdi-help-circle"></i> <span class="hide-menu m-l-5"> Configuración</span></a></li>
+                        <?php
+                      }
+                       ?>
 
                         <div class="navbar-header hide-menu" style="text-align:center;position: absolute;width: 100%;bottom: 0;">
                             <!-- This is for the sidebar toggle which is visible on mobile only -->

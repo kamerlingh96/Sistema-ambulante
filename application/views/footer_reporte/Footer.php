@@ -277,6 +277,12 @@
 <script src="<?= base_url() ?>estilos/dashboard/dist/js/pages/sparkline/jquery.charts-sparkline.js"></script>
 <script src="<?= base_url() ?>estilos/dashboard/dist/js/pages/c3-chart/line/c3-area.js"></script>
 
+
+
+<script src="<?= base_url() ?>estilos/dashboard/assets/libs/echarts/dist/echarts-en.min.js"></script>
+
+
+
 <script type="text/javascript">
   $("input").val()
 </script>
@@ -1128,6 +1134,452 @@ marker.setAnimation(google.maps.Animation.BOUNCE);
     });
 
     </script>
+
+
+
+    <script type="text/javascript">
+    $(function() {
+        "use strict";
+        // ------------------------------
+        // Basic pie chart
+        // ------------------------------
+        // based on prepared DOM, initialize echarts instance
+            var basicpieChart = echarts.init(document.getElementById('basic-pie'));
+            var option = {
+                // Add title
+                    title: {
+                        text: 'Genero',
+                        subtext: 'Ambulante',
+                        x: 'center'
+                    },
+
+                    // Add tooltip
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b}: {c} ({d}%)"
+                    },
+
+                    // Add legend
+                    legend: {
+                        orient: 'vertical',
+                        x: 'left',
+                        data: ['Masculino', 'Femenino']
+                    },
+
+                    // Add custom colors
+                    color: ['#4fc3f7', '#f7ab4f'],
+
+                    // Display toolbox
+                    toolbox: {
+                        show: false,
+                        orient: 'vertical',
+                        feature: {
+                            mark: {
+                                show: true,
+                                title: {
+                                    mark: 'Markline switch',
+                                    markUndo: 'Undo markline',
+                                    markClear: 'Clear markline'
+                                }
+                            },
+                            dataView: {
+                                show: true,
+                                readOnly: false,
+                                title: 'View data',
+                                lang: ['View chart data', 'Close', 'Update']
+                            },
+                            magicType: {
+                                show: true,
+                                title: {
+                                    pie: 'Switch to pies',
+                                    funnel: 'Switch to funnel',
+                                },
+                                type: ['pie', 'funnel'],
+                                option: {
+                                    funnel: {
+                                        x: '25%',
+                                        y: '20%',
+                                        width: '50%',
+                                        height: '70%',
+                                        funnelAlign: 'left',
+                                        max: 1548
+                                    }
+                                }
+                            },
+                            restore: {
+                                show: false,
+                                title: 'Restore'
+                            },
+                            saveAsImage: {
+                                show: false,
+                                title: 'Same as image',
+                                lang: ['Save']
+                            }
+                        }
+                    },
+
+                    // Enable drag recalculate
+                    calculable: true,
+
+                    // Add series
+                    series: [{
+                        name: 'Genero',
+                        type: 'pie',
+                        radius: '70%',
+                        center: ['50%', '57.5%'],
+                        data: [
+                            {value: ambulantesMasculino, name: 'Masculino'},
+                            {value: ambulantesFemenino, name: 'Femenino'}
+                        ]
+                    }]
+            };
+
+            basicpieChart.setOption(option);
+        // ------------------------------
+        // Basic pie chart
+
+
+        var basicpieChart2 = echarts.init(document.getElementById('basic-pie2'));
+        var option = {
+            // Add title
+                title: {
+                    text: 'Zonas',
+                    subtext: 'Ambulante',
+                    x: 'center'
+                },
+
+                // Add tooltip
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b}: {c} ({d}%)"
+                },
+
+                // Add legend
+                legend: {
+                    orient: 'vertical',
+                    x: 'left',
+                    data: ['Zonal 1','Zonal 2','Zonal 3','Zonal 4','Zonal 5','Zonal 6']
+                },
+
+                // Add custom colors
+                color: ['#d6badb', '#d6f3f7','#aad3bd','#a9d0e4','#f8dae5','#f0eaa2'],
+
+                // Display toolbox
+                toolbox: {
+                    show: false,
+                    orient: 'vertical',
+                    feature: {
+                        mark: {
+                            show: true,
+                            title: {
+                                mark: 'Markline switch',
+                                markUndo: 'Undo markline',
+                                markClear: 'Clear markline'
+                            }
+                        },
+                        dataView: {
+                            show: true,
+                            readOnly: false,
+                            title: 'View data',
+                            lang: ['View chart data', 'Close', 'Update']
+                        },
+                        magicType: {
+                            show: true,
+                            title: {
+                                pie: 'Switch to pies',
+                                funnel: 'Switch to funnel',
+                            },
+                            type: ['pie', 'funnel'],
+                            option: {
+                                funnel: {
+                                    x: '25%',
+                                    y: '20%',
+                                    width: '50%',
+                                    height: '70%',
+                                    funnelAlign: 'left',
+                                    max: 1548
+                                }
+                            }
+                        },
+                        restore: {
+                            show: false,
+                            title: 'Restore'
+                        },
+                        saveAsImage: {
+                            show: false,
+                            title: 'Same as image',
+                            lang: ['Save']
+                        }
+                    }
+                },
+
+                // Enable drag recalculate
+                calculable: true,
+
+                // Add series
+                series: [{
+                    name: 'Zonas',
+                    type: 'pie',
+                    radius: '70%',
+                    center: ['50%', '57.5%'],
+                    data: [
+                        {value: zonasCantidad[0], name: 'Zona 1'},
+                        {value: zonasCantidad[1], name: 'Zona 2'},
+                        {value: zonasCantidad[2], name: 'Zona 3'},
+                        {value: zonasCantidad[3], name: 'Zona 4'},
+                        {value: zonasCantidad[4], name: 'Zona 5'},
+                        {value: zonasCantidad[5], name: 'Zona 6'}
+                    ]
+                }]
+        };
+
+        basicpieChart2.setOption(option);
+            //------------------------------------------------------
+           // Resize chart on menu width change and window resize
+           //------------------------------------------------------
+            $(function () {
+
+                    // Resize chart on menu width change and window resize
+                    $(window).on('resize', resize);
+                    $(".sidebartoggler").on('click', resize);
+
+                    // Resize function
+                    function resize() {
+                        setTimeout(function() {
+
+                            // Resize chart
+                            basicpieChart.resize();
+                            basicpieChart2.resize();
+                        }, 200);
+                    }
+                });
+    });
+    </script>
+
+    <script type="text/javascript">
+    $(function() {
+        "use strict";
+
+        // ------------------------------
+        // Stacked bar chart
+        // ------------------------------
+        // based on prepared DOM, initialize echarts instance
+            var stackedChart = echarts.init(document.getElementById('stacked-bar'));
+
+            // specify chart configuration item and data
+            var option = {
+              title: {
+                  text: 'Giro',
+                  subtext: 'Ambulante',
+                  x: 'center'
+              },
+                    // Setup grid
+                    grid: {
+                        x: 200,
+                        x2: 40,
+                        y: 45,
+                        y2: 25
+                    },
+
+                    // Add tooltip
+                    tooltip : {
+                        trigger: 'axis',
+                        axisPointer : {            // Axis indicator axis trigger effective
+                            type : 'shadow'        // The default is a straight line, optionally: 'line' | 'shadow'
+                        }
+                    },
+
+                    // Add legend
+
+                    // Add custom colors
+                    color: ['#4fc3f7'],
+
+                    // Horizontal axis
+                    xAxis: [{
+                        type: 'value',
+                    }],
+
+                    // Vertical axis
+                    yAxis: [{
+                        type: 'category',
+                        data: girosSeleccionados
+                    }],
+
+                    // Add series
+                    series : [
+                        {
+                            name:'Ambulantes',
+                            type:'bar',
+                            stack: 'Total',
+                            itemStyle : { normal: {label : {show: true, position: 'insideLeft'}}},
+                            data:girosCantidad
+                        }
+                    ]
+                };
+            // use configuration item and data specified to show chart
+            stackedChart.setOption(option);
+
+
+            var stackedChart2 = echarts.init(document.getElementById('stacked-bar2'));
+
+            // specify chart configuration item and data
+            var option = {
+              title: {
+                  text: 'Estructuras',
+                  subtext: 'Ambulante',
+                  x: 'center'
+              },
+                    // Setup grid
+                    grid: {
+                        x: 200,
+                        x2: 40,
+                        y: 45,
+                        y2: 25
+                    },
+
+                    // Add tooltip
+                    tooltip : {
+                        trigger: 'axis',
+                        axisPointer : {            // Axis indicator axis trigger effective
+                            type : 'shadow'        // The default is a straight line, optionally: 'line' | 'shadow'
+                        }
+                    },
+
+                    // Add legend
+
+                    // Add custom colors
+                    color: ['#4fc3f7'],
+
+                    // Horizontal axis
+                    xAxis: [{
+                        type: 'value',
+                    }],
+
+                    // Vertical axis
+                    yAxis: [{
+                        type: 'category',
+                        data: estructurasSeleccionados
+                    }],
+
+                    // Add series
+                    series : [
+                        {
+                            name:'Ambulantes',
+                            type:'bar',
+                            stack: 'Total',
+                            itemStyle : { normal: {label : {show: true, position: 'insideLeft'}}},
+                            data:estructurasCantidad
+                        }
+                    ]
+                };
+            // use configuration item and data specified to show chart
+            stackedChart2.setOption(option);
+
+
+            var stackedChart3 = echarts.init(document.getElementById('stacked-bar3'));
+
+            // specify chart configuration item and data
+            var option = {
+              title: {
+                  text: 'Estado',
+                  subtext: 'Ambulante',
+                  x: 'center'
+              },
+                    // Setup grid
+                    grid: {
+                        x: 200,
+                        x2: 40,
+                        y: 45,
+                        y2: 25
+                    },
+
+                    // Add tooltip
+                    tooltip : {
+                        trigger: 'axis',
+                        axisPointer : {            // Axis indicator axis trigger effective
+                            type : 'shadow'        // The default is a straight line, optionally: 'line' | 'shadow'
+                        }
+                    },
+
+                    // Add legend
+
+                    // Add custom colors
+                    color: ['#4fc3f7'],
+
+                    // Horizontal axis
+                    xAxis: [{
+                        type: 'value',
+                    }],
+
+                    // Vertical axis
+                    yAxis: [{
+                        type: 'category',
+                        data: estadoSeleccionados
+                    }],
+
+                    // Add series
+                    series : [
+                        {
+                            name:'Ambulantes',
+                            type:'bar',
+                            stack: 'Total',
+                            itemStyle : { normal: {label : {show: true, position: 'insideLeft'}}},
+                            data:estadoCantidad
+                        }
+                    ]
+                };
+            // use configuration item and data specified to show chart
+            stackedChart3.setOption(option);
+
+
+
+
+           //------------------------------------------------------
+           // Resize chart on menu width change and window resize
+           //------------------------------------------------------
+            $(function () {
+
+                    // Resize chart on menu width change and window resize
+                    $(window).on('resize', resize);
+                    $(".sidebartoggler").on('click', resize);
+
+                    // Resize function
+                    function resize() {
+                        setTimeout(function() {
+
+                            // Resize chart
+                            stackedChart.resize();
+                            stackedChart2.resize();
+                            stackedChart3.resize();
+                        }, 200);
+                    }
+                });
+    });
+    </script>
+
+
+    <script type="text/javascript">
+    $("#seleccionarTodo").on("click", function() {
+      $(".seleccionarTodo").attr("checked", this.checked);
+    });
+    </script>
+
+    <script>
+    $("#seleccionarTodo").on("click", function() {
+    $(".seleccionarTodo").prop("checked", this.checked);
+    });
+
+    // if all checkbox are selected, check the selectall checkbox and viceversa
+    $(".seleccionarTodo").on("click", function() {
+    if ($(".seleccionarTodo").length == $(".seleccionarTodo:checked").length) {
+      $("#seleccionarTodo").prop("checked", true);
+    } else {
+      $("#seleccionarTodo").prop("checked", false);
+    }
+    });
+    </script>
+
+
 
 
 

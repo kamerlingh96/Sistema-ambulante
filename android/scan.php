@@ -1,10 +1,12 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 //include 'conexion.php';
-$con = mysqli_connect("[::1]", "sistemaambulantes", "gobambu19", "ambulante");
-
+//$con = mysqli_connect("[::1]", "sistemaambulantes", "gobambu19", "ambulante");
+$con = mysqli_connect("localhost", "root", "", "comerciantes");
+//$con = mysqli_connect("localhost", "corpboxc_kamerli", "k11204030290006", "corpboxc_comerciantes");
 //$email=$_GET['email'];
 
+$folio = '';
 $folio = $_POST["id"];
 $folio = intval($folio);
 
@@ -50,8 +52,7 @@ while(mysqli_stmt_fetch($statement)){
     $response["jpeg"] = $jpeg;
     //echo $response["tags"];
 }
-
-echo json_encode($response);
+echo json_encode($response,JSON_UNESCAPED_UNICODE);
 
 
 

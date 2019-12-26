@@ -1,11 +1,12 @@
 <?php
 
 //include 'conexion.php';
-$con = mysqli_connect("[::1]", "sistemaambulantes", "gobambu19", "ambulante");
+//$con = mysqli_connect("[::1]", "sistemaambulantes", "gobambu19", "ambulante");
+//$con = mysqli_connect("localhost", "root", "", "comerciantes");
+$con = mysqli_connect("localhost", "corpboxc_kamerli", "k11204030290006", "corpboxc_comerciantes");
+//$email=$_POST['email'];
 
-//$email=$_GET['email'];
-
-$id_post = $_GET["id"];
+$id_post = $_POST["id"];
 $id_post = intval($id_post);
 
 
@@ -19,9 +20,11 @@ while($registro = mysqli_fetch_array($resultado)){
 }
 mysqli_close($con);
 echo json_encode($json);
+//echo "<br>";
 
-
-
+//echo "<pre>";
+//print_r($json);
+//echo "</pre>";
 
 
 
